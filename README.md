@@ -16,8 +16,12 @@ The scheduler examples use measured Python-simulator reports and event traces. T
 
 ## GitHub Pages
 
-Publish `main` → `/docs` under **Settings → Pages → Deploy from a branch**. The included `.nojekyll` leaves the prebuilt HTML untouched. All asset links are relative, so this works as a project site. The offline ZIP contains the same static site and can be opened directly with `index.html` after extraction.
+Publish `main` → `/docs` under **Settings → Pages → Deploy from a branch**. The included `.nojekyll` leaves the prebuilt HTML untouched. All asset links are relative, so this works as a project site. The offline ZIP contains the reading site and browser labs. PDF/companion downloads and external references still need a connection. Open the extracted site directly with `index.html` after extraction.
 
 ## Reuse and third-party material
 
 No license grant is specified for this repository. Public availability alone is not a grant of unrestricted reuse. Linked papers and documentation retain their original authors' rights. Explanatory prose, examples, visualizations, and interface code are original to this book. The companion snapshot includes selected scheduler source needed to interpret the user-authorized simulator case; see its README and provenance manifest.
+
+## Shared-link previews
+
+Every HTML page includes static Open Graph and Twitter card metadata using the intact public book cover. Page-specific canonical URLs and titles are included; the image is PNG, 1102 × 1427. Chat and social apps control their own cropping and cache refresh timing.
