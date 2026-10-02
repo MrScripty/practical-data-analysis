@@ -24,4 +24,4 @@ No license grant is specified for this repository. Public availability alone is 
 
 ## Shared-link previews
 
-Every HTML page includes static Open Graph and Twitter card metadata using the intact public book cover. Page-specific canonical URLs and titles are included; the image is PNG, 1102 × 1427. Chat and social apps control their own cropping and cache refresh timing.
+Every HTML page includes static Open Graph and Twitter card metadata using a landscape book-cover card. Page-specific canonical URLs and titles are included; the image is JPEG, 1280 × 640 (230,773 bytes). The same card is saved in the repository’s Settings → Social preview. Chat and social apps control their own cropping and cache refresh timing.

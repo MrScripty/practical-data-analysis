@@ -66,14 +66,14 @@ body='<main id="main" class="labpage"><span class="eyebrow">Keep a copy</span><h
 shutil.copytree(SOURCE/'figures',DOCS/'assets/figures',dirs_exist_ok=True)
 # Statically rendered social metadata for crawlers that do not run JavaScript.
 PUBLIC='https://mrscripty.github.io/practical-data-analysis/'
-COVER=PUBLIC+'assets/cover.png'
+COVER=PUBLIC+'assets/social-preview.jpg'
 DESC='An interactive book by Puma: 18 practical chapters, nine browser labs, and reproducible examples spanning engineering, vectors, images, GIS, finance, and uncertainty.'
-ALT='Puma book cover for Practical Data Analysis for Engineering Decisions: mountain contours, a river, pixels, and analytical plots.'
+ALT='Practical Data Analysis for Engineering Decisions by Puma: full illustrated book cover beside its title on an ivory landscape card.'
 for page in DOCS.rglob('*.html'):
  raw=page.read_text();rel=page.relative_to(DOCS).as_posix();canonical=PUBLIC+('' if rel=='index.html' else rel)
  page_title=html.unescape(re.search(r'<title>(.*?)</title>',raw)[1])
  share_title=TITLE if rel=='index.html' else page_title
- tags=[f'<link rel="canonical" href="{canonical}">',f'<meta property="og:type" content="website">',f'<meta property="og:site_name" content="{a(TITLE)}">',f'<meta property="og:title" content="{a(share_title)}">',f'<meta property="og:description" content="{a(DESC)}">',f'<meta property="og:url" content="{canonical}">',f'<meta property="og:image" content="{COVER}">',f'<meta property="og:image:secure_url" content="{COVER}">','<meta property="og:image:type" content="image/png">','<meta property="og:image:width" content="1102">','<meta property="og:image:height" content="1427">',f'<meta property="og:image:alt" content="{a(ALT)}">','<meta name="twitter:card" content="summary_large_image">',f'<meta name="twitter:title" content="{a(share_title)}">',f'<meta name="twitter:description" content="{a(DESC)}">',f'<meta name="twitter:image" content="{COVER}">',f'<meta name="twitter:image:alt" content="{a(ALT)}">']
+ tags=[f'<link rel="canonical" href="{canonical}">',f'<meta property="og:type" content="website">',f'<meta property="og:site_name" content="{a(TITLE)}">',f'<meta property="og:title" content="{a(share_title)}">',f'<meta property="og:description" content="{a(DESC)}">',f'<meta property="og:url" content="{canonical}">',f'<meta property="og:image" content="{COVER}">',f'<meta property="og:image:secure_url" content="{COVER}">','<meta property="og:image:type" content="image/jpeg">','<meta property="og:image:width" content="1280">','<meta property="og:image:height" content="640">',f'<meta property="og:image:alt" content="{a(ALT)}">','<meta name="twitter:card" content="summary_large_image">',f'<meta name="twitter:title" content="{a(share_title)}">',f'<meta name="twitter:description" content="{a(DESC)}">',f'<meta name="twitter:image" content="{COVER}">',f'<meta name="twitter:image:alt" content="{a(ALT)}">']
  raw=raw.replace('</head>',''.join(tags)+'</head>');page.write_text(raw)
 
 with zipfile.ZipFile(DOCS/'downloads/practical-data-analysis-offline.zip','w',zipfile.ZIP_DEFLATED) as z:
