@@ -1,0 +1,11 @@
+(function(root){'use strict';
+const project=(x,theta)=>{const u=[Math.cos(theta),Math.sin(theta)],d=x[0]*u[0]+x[1]*u[1],p=u.map(v=>v*d);return {projection:p,residual:x.map((v,i)=>v-p[i]),direction:u};};
+const pcaReconstruct=(rows,rank)=>{const mu=[2.5,2.5],axes=[[Math.SQRT1_2,Math.SQRT1_2],[-Math.SQRT1_2,Math.SQRT1_2]];return rows.map(r=>{const d=r.map((v,i)=>v-mu[i]);let v=[...mu];for(let k=0;k<rank;k++){let score=d[0]*axes[k][0]+d[1]*axes[k][1];v=v.map((x,j)=>x+score*axes[k][j]);}return v;});};
+const largestComponent=(image,threshold)=>{let h=image.length,w=image[0].length,seen=new Uint8Array(h*w),largest=[],count=0,total=0;for(let y=0;y<h;y++)for(let x=0;x<w;x++){let i=y*w+x;if(seen[i]||!(image[y][x]>=threshold))continue;count++;let stack=[i],part=[];seen[i]=1;while(stack.length){let k=stack.pop(),r=Math.floor(k/w),c=k%w;part.push(k);for(let [rr,cc] of [[r-1,c],[r+1,c],[r,c-1],[r,c+1]]){let n=rr*w+cc;if(rr>=0&&rr<h&&cc>=0&&cc<w&&!seen[n]&&image[rr][cc]>=threshold){seen[n]=1;stack.push(n);}}}total+=part.length;if(part.length>largest.length)largest=part;}return{largest,count,total};};
+const join=(point,rects,mode)=>rects.flatMap((r,i)=>{let [x,y]=point,[l,b,rr,t]=r;let yes=mode==='strict'?x>l&&x<rr&&y>b&&y<t:mode==='closed'?x>=l&&x<=rr&&y>=b&&y<=t:x>=l&&x<rr&&y>=b&&y<t;return yes?[i]:[];});
+const npv=(cash,rate)=>cash.reduce((a,v,i)=>a+v/(1+rate)**i,0);
+const returns=rs=>{let wealth=[100],peak=100,maxDrawdown=0;for(let r of rs){let w=wealth.at(-1)*(1+r);wealth.push(w);peak=Math.max(peak,w);maxDrawdown=Math.max(maxDrawdown,1-w/peak);}return{wealth,total:wealth.at(-1)/100-1,arithmetic:rs.reduce((a,b)=>a+b,0)/rs.length,geometric:(wealth.at(-1)/100)**(1/rs.length)-1,maxDrawdown};};
+const workerTime=(n,a=100,b=2,c=.2)=>a/n+b+c*(n-1);
+const optimize=(budget,a=100,b=2,c=.2)=>{let best=1;for(let n=2;n<=budget;n++)if(workerTime(n,a,b,c)<workerTime(best,a,b,c))best=n;return best;};
+const api={project,pcaReconstruct,largestComponent,join,npv,returns,workerTime,optimize};root.ExpandedMath=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window==='undefined'?globalThis:window);

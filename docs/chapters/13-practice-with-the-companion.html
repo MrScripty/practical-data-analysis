@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>13 Practice with the companion · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html" aria-current="page"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html" aria-current="page"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 13</span><span>7 min read</span></div><h1 id="13-practice-with-the-companion">13 Practice with the
+companion</h1>
+<h2 id="run-a-complete-analysis-first">Run a complete analysis
+first</h2>
+<p>The companion uses Python with NumPy, pandas, and matplotlib. The
+verified run used Python 3.12.14, NumPy 2.3.5, pandas 2.2.3, and
+matplotlib 3.10.8. These versions describe the environment that produced
+the book's outputs; they are not a requirement to upgrade an existing
+project blindly.</p>
+<p>From the book directory, run:</p>
+<pre class="bash"><code>python companion/analyze.py
+python companion/check_outputs.py</code></pre>
+<p>The program verifies hashes in the snapshot manifest, reconstructs
+task and phase tables, checks arithmetic against the simulator reports,
+writes derived CSV files, and regenerates six figures. It also creates
+the labeled synthetic agent, paired-run, and research examples. It never
+runs or changes the scheduler itself.</p>
+<p>If a hash check fails, stop. Do not edit the expected hash merely to
+make the test pass. You may have mixed versions, changed an input, or
+downloaded an incomplete file. Restore the intended snapshot or
+intentionally create and document a new analysis version.</p>
+<p>The parser is intentionally strict for these five complete diagnostic
+traces. They contain one ready event and one accepted result per task,
+and all phases close. A production parser needs additional states for
+retries, cancellations, open intervals, and partial traces. A test
+fixture is not a universal ingestion library.</p>
+<h2 id="lab-1-reproduce-a-metric-from-events">Lab 1 Reproduce a metric
+from events</h2>
+<p>Open the generated scheduler_tasks.csv. Each row is one task within
+one diagnostic run. Inspect the fields before calculating anything:
+run_id, task_id, arrival_s, ready_s, first_phase_s, accepted_s,
+latency_s, ready_wait_s, and first_device.</p>
+<p>Load it and check its key:</p>
+<pre class="python"><code>from pathlib import Path
+import pandas as pd
+
+root = Path(&#39;.&#39;)
+tasks = pd.read_csv(root / &#39;companion/derived/scheduler_tasks.csv&#39;)
+assert not tasks.duplicated([&#39;run_id&#39;, &#39;task_id&#39;]).any()
+assert len(tasks) == 60
+
+one = tasks[tasks.run_id == &#39;after_fix_proposed&#39;].copy()
+assert len(one) == 12
+assert (one.accepted_s &gt;= one.arrival_s).all()
+print(one.accepted_s.max())</code></pre>
+<p>Expected result: approximately 56.642415 seconds. Trace timestamps
+are rounded to six decimal places, so use tolerances rather than exact
+floating-point equality when comparing them to full-precision
+reports.</p>
+<p>Now sort latency_s and calculate the sixth value and the average of
+the sixth and seventh. The first reproduces the report's nearest-rank
+p50; the second is the conventional median for 12 values. Explain why
+they differ without calling either a software bug.</p>
+<p>Next, compare first_phase_s minus arrival_s with ready_wait_s. They
+answer different questions because dependency time can occur before a
+task is ready. Write the endpoint definitions beside each result.</p>
+<h2 id="lab-2-preserve-a-policy-pair">Lab 2 Preserve a policy pair</h2>
+<p>Load holdout_runs.csv and filter to matched_service. Check uniqueness
+on regime, scenario, seed, and policy. Pivot policy into columns so each
+row is one scenario-seed combination:</p>
+<pre class="python"><code>runs = pd.read_csv(root / &#39;companion/derived/holdout_runs.csv&#39;)
+matched = runs[runs.regime == &#39;matched_service&#39;]
+wide = matched.pivot(index=[&#39;scenario&#39;, &#39;seed&#39;],
+                     columns=&#39;policy&#39;, values=&#39;makespan_s&#39;)
+assert len(wide) == 12
+assert not wide.isna().any().any()
+wide[&#39;difference_s&#39;] = wide[&#39;proposed&#39;] - wide[&#39;residency&#39;]
+print(wide.loc[&#39;randomized&#39;])</code></pre>
+<p>Show all three randomized differences before calculating a mean. At
+least one seed favors the proposed policy and others favor residency.
+The mean therefore hides important variation. Describe the result as
+three tested workloads, not a reliable estimate of all future randomized
+workloads.</p>
+<p>Then compute the mean of per-seed ratios and the ratio of mean times.
+Explain why they need not be identical. State which weighting scheme
+each represents.</p>
+<h2 id="lab-3-inspect-one-decision">Lab 3 Inspect one decision</h2>
+<p>Open scheduler_candidates.csv and select the repaired proposed run at
+time approximately 40.495955 seconds. The actions_json field preserves
+the candidate's structured action list. Identify the warm-CPU candidate,
+the no-action candidate, and the eviction candidate.</p>
+<p>Write down their scores and score components. Do not convert a score
+into seconds. Use the forced-final-GPU trace to compare the resulting
+completion time, while preserving the fact that this was a single
+diagnostic intervention.</p>
+<p>Expected interpretation: candidate coverage was repaired, but the
+scoring rule still preferred the warm CPU. The forced GPU continuation
+improved this one run substantially without reaching FIFO's finish time.
+A good answer names both the supported mechanism and the unexplained
+remainder.</p>
+<h2 id="lab-4-audit-a-judge">Lab 4 Audit a judge</h2>
+<p>Load synthetic_agent_trials.csv. Count tasks, variants, trials, and
+rows separately. Rebuild the confusion matrix between human_pass and
+judge_pass. These are generated reference and judge labels, not
+observations from actual human reviewers.</p>
+<p>Calculate overall agreement, the false-positive rate among reference
+failures, and the false-discovery fraction among judge approvals.
+Expected values are about 87.4 percent, 31.8 percent, and 10.0 percent
+respectively. Explain which quantity matters if a false approval can
+trigger an unsafe action.</p>
+<p>Break the results down by easy and hard task families. Then compare
+variants' observed success and total cost per verified success. Do not
+estimate uncertainty by treating all repeated rows as independent tasks.
+A task-level resampling or hierarchical analysis would be a more
+appropriate starting point if inference were needed.</p>
+<h2 id="lab-5-make-missingness-visible">Lab 5 Make missingness
+visible</h2>
+<p>Load synthetic_research_records.csv. Count nonmissing
+verification_minutes and missing values by hard_to_verify and source.
+Compute the observed mean. Expected result: 84 observed records, 16
+missing records, and an observed mean of 5.5 minutes.</p>
+<p>Read the generation rule in analyze.py. In this constructed
+population, 75 easy records would take 4 minutes and 25 hard records
+would take 18 minutes, for a complete-data mean of 7.5. The gap comes
+from which records are missing, not random arithmetic noise.</p>
+<p>In a real research workflow, the generating rule would be unknown.
+Write a short note explaining what you could observe, what you would
+have to assume, and which additional records you would try to verify
+first.</p>
+<h2 id="lab-6-write-the-next-experiment">Lab 6 Write the next
+experiment</h2>
+<p>Choose one scheduler hypothesis: a completion-oriented score, a
+stronger baseline, or a predictor improvement. Write a one-page protocol
+with a fixed primary outcome, guardrails, eligible workloads, fresh
+workload generation rules, pairing, run budget, failure handling, and
+stopping condition.</p>
+<p>Include at least one case designed to disprove the hypothesis. For
+example, a stronger delay penalty could improve batch finish while
+harming a background-work requirement. Define how you would detect that
+regression. Do not choose a new default based only on the same seed 7
+case that suggested the change.</p>
+<h2 id="common-mistakes-and-their-repairs">Common mistakes and their
+repairs</h2>
+<p>If a join multiplies rows, check its key cardinality before adjusting
+the aggregate. If a percentile differs from the report, check the
+definition and population before blaming the library. If a policy looks
+faster after excluding timeouts, put the timeouts back into the
+population accounting. If a chart has a dramatic trend, inspect the
+denominator and collection process. If an agent judge agrees 90 percent
+of the time, inspect what happens in the other 10 percent and whether
+the label distribution makes agreement easy.</p>
+<p>If a parameter change wins one famous failing case, add that case to
+development tests and evaluate a frozen choice on fresh workloads. If a
+simulator looks excellent, test the assumptions that would be most
+costly to get wrong in deployment. If the conclusion cannot be
+reproduced from saved inputs, repair the evidence chain before making it
+more persuasive.</p>
+<h2 id="a-compact-working-checklist">A compact working checklist</h2>
+<p>Before collecting: name the decision, primary outcome, population,
+observational unit, and guardrails.</p>
+<p>Before analyzing: preserve raw inputs, record provenance, validate
+keys and units, reconcile counts, and inspect missingness.</p>
+<p>Before comparing: align controls, preserve pairs, identify
+independent units, include failures, and choose meaningful effect
+units.</p>
+<p>Before explaining: inspect traces, consider alternative mechanisms,
+separate correlation from intervention, and seek counterexamples.</p>
+<p>Before deciding: show uncertainty and limits, include cost, choose a
+reversible next step when evidence is early, and record what would
+change your mind.</p>
+<h2 id="a-short-glossary">A short glossary</h2>
+<p>Baseline: the alternative used as a reference.</p>
+<p>Cohort: a group defined by a relevant shared characteristic.</p>
+<p>Confounding: distortion of a comparison by a factor affecting both
+assignment and outcome.</p>
+<p>Counterfactual: the outcome under an alternative intervention that
+was not observed for the same event.</p>
+<p>ECDF: a plot of the fraction of observations at or below each
+value.</p>
+<p>Effect size: the magnitude of a difference in useful units or a
+specified standardized scale.</p>
+<p>Estimand: the precise quantity an analysis is trying to estimate,
+such as mean paired completion-time difference for a defined workload
+population.</p>
+<p>Guardrail: a constraint or secondary outcome that prevents an
+unacceptable tradeoff.</p>
+<p>Leakage: use of information in development or evaluation that would
+not be legitimately available in the intended prediction setting.</p>
+<p>Observational unit: the kind of thing represented by one observation,
+such as a task, attempt, or independent run.</p>
+<p>Provenance: the origin and transformation history of information.</p>
+<p>Right censoring: knowing that an outcome time exceeds an observation
+cutoff without knowing its eventual value.</p>
+<p>Surrogate: a proxy quantity optimized or measured in place of a
+harder or more expensive goal.</p>
+<h2 id="where-to-read-next">Where to read next</h2>
+<p>For hands-on Python data manipulation, read the author's online
+edition of Wes McKinney's Python for Data Analysis. Work through
+indexing, grouping, joining, missing data, and time-series chapters as
+the need arises. <a href="https://wesmckinney.com/book/">Python for Data
+Analysis</a></p>
+<p>For plots and graphical choices, use Claus Wilke's Fundamentals of
+Data Visualization. Recreate one relevant chart with your own data
+rather than reading it only as a gallery. <a
+href="https://clauswilke.com/dataviz/">Fundamentals of Data
+Visualization</a></p>
+<p>For statistical foundations, OpenIntro Statistics is a gentler
+starting point than a machine-learning text. For engineering examples
+and reference procedures, keep the NIST handbook nearby. <a
+href="https://www.openintro.org/book/os/">OpenIntro Statistics</a> and
+<a href="https://www.itl.nist.gov/div898/handbook/">NIST engineering
+statistics</a></p>
+<p>When you are ready to model data, An Introduction to Statistical
+Learning with Applications in Python provides an accessible progression
+with practical labs. Use the authors' legally available edition. <a
+href="https://www.statlearning.com/">An Introduction to Statistical
+Learning</a></p>
+<p>For time-dependent problems, use Forecasting Principles and Practice.
+For causal questions, begin with the first, less model-heavy part of
+Causal Inference What If. These are deeper follow-on texts, not
+prerequisites for your first useful engineering investigation. <a
+href="https://otexts.com/fpp3/">Forecasting Principles and Practice</a>
+and <a href="https://miguelhernan.org/whatifbook">Causal Inference What
+If</a></p>
+<p>The best next exercise is still a small real question from your own
+system. Preserve the evidence, make one fair comparison, and write down
+what the result allows you to do.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="12-turn-findings-into-a-decision.html"><small>← Previous</small>12 Turn findings into an engineering decision</a><a href="14-reason-with-vectors-and-matrices.html"><small>Next →</small>14 Reason with vectors and matrices</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#lab-2-preserve-a-policy-pair">Lab 2 Preserve a policy pair</a><a href="#lab-3-inspect-one-decision">Lab 3 Inspect one decision</a><a href="#lab-4-audit-a-judge">Lab 4 Audit a judge</a><a href="#a-compact-working-checklist">A compact working checklist</a><a href="#a-short-glossary">A short glossary</a><a href="#where-to-read-next">Where to read next</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

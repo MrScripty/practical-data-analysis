@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>7 Find out what a change causes · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html" aria-current="page"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html" aria-current="page"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 7</span><span>5 min read</span></div><h1 id="7-find-out-what-a-change-causes">7 Find out what a change
+causes</h1>
+<h2 id="observation-and-intervention">Observation and intervention</h2>
+<p>Observational data records what happened under the process that
+produced it. An experiment changes something deliberately and compares
+outcomes under a design. Both are useful. They answer different
+questions.</p>
+<p>Suppose GPU tasks finish faster than CPU tasks. Perhaps the GPU is
+faster for those tasks. Perhaps the scheduler sends easy tasks to the
+GPU and difficult ones to the CPU. Perhaps GPU tasks are more likely to
+arrive when the queue is short. A raw comparison mixes these
+explanations.</p>
+<p>A causal question asks what would happen if the same relevant
+population received one intervention rather than another. You cannot
+usually observe both outcomes for the exact same real-world event. A
+design tries to make the observed comparison stand in for that missing
+counterfactual. Hernán and Robins' open textbook develops this framework
+and the assumptions needed to use observational comparisons causally. <a
+href="https://miguelhernan.org/whatifbook">Causal Inference What
+If</a></p>
+<h2 id="draw-the-process-before-adjusting-for-it">Draw the process
+before adjusting for it</h2>
+<p>Use a simple causal sketch in words. Task difficulty influences
+device choice and completion time. Queue state influences device choice
+and completion time. Policy influences device choice, queue state, and
+completion time. Those relationships tell you why comparing device
+groups may be confounded.</p>
+<p>A confounder is a pre-intervention common cause that can distort the
+treatment-outcome comparison. A mediator is part of the pathway through
+which an intervention works. If a policy changes cache hits and cache
+hits change latency, cache hits may be a mediator. Adjusting away that
+change can remove part of the effect you wanted to measure.</p>
+<p>Not every available variable should be added to a regression.
+Conditioning on consequences of the policy or selection process can
+introduce bias. For a beginner, a clear controlled comparison is often
+safer than a complicated observational adjustment whose assumptions are
+hard to defend.</p>
+<h2 id="a-practical-controlled-experiment">A practical controlled
+experiment</h2>
+<p>Write the protocol before running the comparison. Name the treatment,
+baseline, eligible workloads, assignment unit, primary outcome,
+guardrails, run budget, stopping rule, and exclusion criteria. Record
+the code and configuration versions. Decide how failed runs count.</p>
+<p>Randomize assignment or run order when the environment can drift. If
+all baseline runs occur in the morning and all new-policy runs occur
+after a driver change or under different machine load, the policy
+comparison is confounded with time. Alternating or randomizing order
+within a block reduces that risk.</p>
+<p>Block on major known sources of variation. For example, compare both
+policies on the same workload and machine class, then repeat across
+seeds or workload batches. A block is a group within which the
+alternatives are made comparable. NIST's experimental-design guidance
+distinguishes comparative designs, screening designs, and
+response-surface designs because those questions call for different
+experiments. <a
+href="https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm">NIST
+design selection</a></p>
+<h2 id="a-seed-is-not-a-complete-fairness-guarantee">A seed is not a
+complete fairness guarantee</h2>
+<p>Simulation often uses common random inputs so alternatives face the
+same arrivals and task characteristics. This can make paired comparisons
+more precise. However, if each policy consumes a single random-number
+stream in a different order, later draws may no longer refer to
+equivalent events. “Same seed” then does not guarantee the same realized
+disturbances.</p>
+<p>Separate workload generation from policy execution when possible.
+Save the generated workload itself. For execution noise, key random
+draws to stable entities such as task, attempt, phase, and scenario when
+that matches the model. Document when the alternative legitimately
+changes which events occur.</p>
+<p>The book's companion reads saved results and traces; it does not
+assume a seed proves identical all-purpose stochastic conditions. The
+snapshot's configuration and the simulator's explicit limitations remain
+part of the interpretation.</p>
+<h2 id="interference-changes-the-unit-of-assignment">Interference
+changes the unit of assignment</h2>
+<p>Two tasks sharing one scheduler can affect each other's outcomes.
+Assigning policy A to some tasks and policy B to others in the same
+queue may not create two independent systems. One group's long tasks or
+model loads can delay the other. This is interference.</p>
+<p>For a scheduler, consider randomizing whole isolated workload runs,
+clusters, or time windows rather than individual tasks, depending on the
+real architecture. Time-window experiments need washout or carryover
+analysis if queues, caches, or resident models persist across windows.
+Isolation improves interpretability but may reduce realism. State that
+tradeoff.</p>
+<p>Agents can also interfere. Two agents may share a rate limit, modify
+the same repository, read one another's outputs, or compete for a tool.
+Evaluation environments must distinguish intended collaboration from
+accidental leakage between trials.</p>
+<h2 id="change-one-thing-when-diagnosing">Change one thing when
+diagnosing</h2>
+<p>An ablation removes or changes one component to learn what it
+contributes. The scheduler's protection-off diagnostic asks a narrower
+question than a full policy replacement. Its delay-weight change is
+another ablation. These are useful because they avoid bundling a new
+objective, a wider search, a different predictor, and a bigger memory
+budget into one opaque improvement.</p>
+<p>One-factor-at-a-time tests can miss interactions. Increasing search
+depth might help only after the score is improved. Changing the score
+might help only when the candidate generator includes the relevant
+option. After a local diagnosis, a small factorial design can test
+combinations deliberately.</p>
+<p>For two binary factors, run all four combinations: old and new
+objective crossed with narrow and wide search. Compare the effect of the
+objective at each search setting. If the effect changes substantially,
+there is an interaction worth understanding. Do not average it away and
+claim a universal component effect.</p>
+<h2 id="stop-for-a-reason-you-chose-in-advance">Stop for a reason you
+chose in advance</h2>
+<p>Watching results and stopping the moment a desired threshold is
+crossed changes the statistical procedure. A fixed-horizon analysis
+should use its planned sample size or stopping condition. A sequential
+design can permit repeated looks, but it must account for them.</p>
+<p>Operational guardrails are different. If an experiment causes
+unacceptable failures or resource use, stop it to protect the system.
+Record why it stopped and include the failure in the outcome.
+Safety-driven stopping does not justify reporting only the earlier
+favorable performance window.</p>
+<p>There is no universal minimum number of runs. Plan around the
+smallest worthwhile effect, expected variation, dependence, and cost of
+the wrong decision. Use a pilot to estimate variation, then design the
+confirming test. If resources only permit a small sample, give a
+descriptive result and a bounded decision rather than an artificially
+confident claim.</p>
+<h2 id="transfer-from-simulation-to-deployment">Transfer from simulation
+to deployment</h2>
+<p>Simulation lets you manipulate states that are difficult or costly to
+reproduce. It is excellent for finding counterexamples and testing an
+accounting or scheduling mechanism. Its external validity depends on
+what it models: setup latency, contention, memory behavior, device
+heterogeneity, failure patterns, and scheduling overhead.</p>
+<p>A staged path is reasonable: unit fixtures for correctness; synthetic
+workloads for mechanism coverage; replay or shadow analysis on observed
+workloads; isolated real-device benchmarks; then a limited deployment
+with guardrails. At each stage, ask what new uncertainty is being
+reduced. Passing one stage does not silently grant the evidence of the
+next.</p>
+<p>Exercise: write a four-run factorial design for two changes you are
+considering. State the assignment unit and one plausible source of
+interference. Then explain which result would make you keep only one of
+the changes.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="06-explain-a-losing-scheduler.html"><small>← Previous</small>6 Explain a losing scheduler run</a><a href="08-analyze-a-system-over-time.html"><small>Next →</small>8 Analyze a system over time</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#observation-and-intervention">Observation and intervention</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

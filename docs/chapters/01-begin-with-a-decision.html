@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>1 Begin with a decision · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html" aria-current="page"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html" aria-current="page"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 1</span><span>5 min read</span></div><h1 id="1-begin-with-a-decision">1 Begin with a decision</h1>
+<h2 id="the-first-useful-question">The first useful question</h2>
+<p>“Analyze the data” is too broad to guide an investigation. It does
+not tell you which rows matter, what comparison is fair, or what a
+useful answer would change. Begin with a decision you could actually
+make: should we replace the scheduler policy, adjust a scoring term, add
+a faster execution path, or leave the current design alone?</p>
+<p>A workable first question is: “On workloads we expect to run, does
+the new policy reduce completion time enough to justify its extra
+planning cost, while keeping failures and long waits acceptable?” This
+already contains a population, an alternative, an outcome, a cost, and
+constraints. Each part can become a measurement.</p>
+<p>Avoid trying to answer every version of “better” at once. A policy
+may finish the whole workload sooner while making the typical task
+slower. It may improve average speed but create rare unacceptable waits.
+It may reduce simulated completion time while taking much more real time
+to make a decision. These are different outcomes. Data will not choose
+your priorities for you.</p>
+<h2 id="a-complete-investigation-in-miniature">A complete investigation
+in miniature</h2>
+<p>Consider five tasks run under policies A and B. The following numbers
+are synthetic task latencies in seconds, matched by task identifier:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th style="text-align: right;">Policy A</th>
+<th style="text-align: right;">Policy B</th>
+<th style="text-align: right;">B minus A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>t1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td>t2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td>t3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td>t4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td>t5</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+<p>Both policies have mean latency 8 seconds: the sums are both 40 and
+there are five tasks. B has a better median, 5 instead of 6 seconds. It
+wins on four of five tasks, but its slowest task takes 4 seconds longer.
+If a dashboard shows only the mean, you will see no difference. If it
+shows only the win rate, B looks excellent. If the last task is the
+urgent one, that recommendation may be wrong.</p>
+<p>Suppose the product requirement says that every task in this tiny
+test must finish within 20 seconds. A passes; B fails. That does not
+prove A is universally better. It answers a narrower question under an
+explicit constraint. Suppose instead that the requirement values typical
+responsiveness and permits the observed tail. The same measurements
+could justify a different choice. This is why the decision comes
+first.</p>
+<p>Now ask whether these were fair trials. Did both policies see the
+same inputs? Were the machine and model already warm in one run but cold
+in the other? Were failed tasks included? Did the policy that ran second
+benefit from a cache? These questions can matter more than choosing a
+sophisticated statistical test.</p>
+<p>Finally, inspect t5. Its trace may show a long queue, a slow tool
+call, a retry, or an unfavorable resource assignment. A summary tells
+you that an important difference exists. A trace helps you construct a
+testable explanation. You then change one relevant mechanism and rerun.
+That is a complete analysis loop, even with a spreadsheet and five
+rows.</p>
+<h2 id="translate-an-intention-into-a-measurement">Translate an
+intention into a measurement</h2>
+<p>A metric is a rule for turning observations into a number. It needs
+more than a name. “Latency” might mean submission to first response,
+ready to execution start, execution time alone, or submission to an
+accepted final result. All could be useful; mixing them invalidates the
+comparison.</p>
+<p>Write a metric contract before implementation. For each important
+metric, state the unit of observation, start and end events, physical
+unit, eligible population, treatment of failures, aggregation rule, and
+desired direction. For example: “For every submitted workflow, measure
+seconds from accepted submission to accepted final output; count
+incomplete workflows separately at the observation cutoff; report
+median, a tail percentile, and completion fraction.”</p>
+<p>There are two kinds of units here. A physical unit is seconds, bytes,
+dollars, or a fraction. An observational unit is a task, attempt,
+workflow, user, machine, or independent experimental run. “100
+observations” is almost meaningless until you know what was observed.
+One run can produce a million log messages without becoming a million
+independent tests.</p>
+<p>Choose one primary outcome for the decision. Add guardrails that can
+veto an apparently good result, such as correctness, failure rate,
+memory limits, or maximum waiting time. Keep diagnostic metrics, such as
+cache hits or model loads, because they help explain changes. A
+diagnostic metric does not automatically deserve to be optimized.</p>
+<h2 id="write-the-analysis-plan-in-ordinary-language">Write the analysis
+plan in ordinary language</h2>
+<p>A useful plan fits in a few paragraphs. State what decision is
+pending, what alternatives will be compared, what inputs will be held
+constant, and what evidence would change your mind. Define the smallest
+improvement worth acting on. A 0.1 percent speedup may be irrelevant if
+the new policy doubles maintenance cost. A 5 millisecond improvement may
+matter greatly on a critical interaction path.</p>
+<p>Then state what you will not know after the test. A short simulation
+can compare mechanisms under its own assumptions. It cannot establish
+device throughput, production stability, or user satisfaction. A labeled
+agent test can measure behavior on those tasks. It cannot establish that
+unseen tasks have the same distribution.</p>
+<p>This does not weaken the analysis. It makes the result usable. An
+engineer needs to know whether a number supports changing a line of
+code, running a wider experiment, or shipping a new default.</p>
+<h2 id="baselines-are-part-of-the-argument">Baselines are part of the
+argument</h2>
+<p>A baseline is the alternative you would use without the proposed
+change. First-in-first-out is a natural scheduler baseline because it is
+easy to understand. It may not be the strongest practical alternative. A
+simple policy that avoids unnecessary model reloads could perform better
+without the complexity of a planner.</p>
+<p>Compare against a plausible simple competitor as well as the current
+implementation. If a new system barely beats a weak baseline and loses
+to a stronger simple one, the result is a design lesson. It suggests
+that the useful insight may be much smaller than the architecture built
+around it.</p>
+<p>Keep baseline capabilities aligned. If one policy gets fairness
+protection, priority boosts, retry handling, or a larger resource budget
+and another does not, the comparison is between bundles of features.
+That can be a legitimate product comparison, but it cannot identify the
+effect of just the scheduling algorithm.</p>
+<h2 id="what-to-produce">What to produce</h2>
+<p>Your first deliverable should be a small evidence package: a
+question, a metric contract, a table with all eligible cases, one or two
+informative plots, a statement of what is observed, and a next test or
+decision. A notebook with many charts is not automatically a better
+package. The reader should be able to follow the chain from source
+events to conclusion.</p>
+<p>Exercise: choose one system you are building. Complete this sentence:
+“I need to decide whether to ___ rather than ___, for ___, because ___
+is the outcome that matters, subject to ___.” If you cannot finish it,
+the next useful work is clarifying the decision rather than collecting
+more data.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="00a-expanded-reading-path.html"><small>← Previous</small>A route through the expanded edition</a><a href="02-measure-what-happened.html"><small>Next →</small>2 Measure what happened</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#the-first-useful-question">The first useful question</a><a href="#what-to-produce">What to produce</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

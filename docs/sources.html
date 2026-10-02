@@ -1,0 +1,344 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>Sources and evidence · Practical Data Analysis</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="chapters/00-start-here.html">Read</a><a href="labs/index.html">Labs</a><a class="desktopnav" href="downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><main id="main" class="labpage prose"><h1 id="sources-and-evidence">Sources and evidence</h1>
+<p>These references support the definitions, methods, and further
+reading in the book. All worked datasets and figures are original or
+drawn from the pinned scheduler simulation. Generated teaching examples
+are labeled synthetic. Source pages were checked on 2 October 2026;
+official documentation may evolve independently of the companion
+runtime.</p>
+<p>S01. <a
+href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry
+traces</a></p>
+<p>Used in chapter 2. Trace, span, and attribute concepts for
+instrumentation.</p>
+<p>S02. <a
+href="https://prometheus.io/docs/practices/histograms/">Prometheus
+histograms and summaries</a></p>
+<p>Used in chapter 2. Aggregation limits of precomputed quantiles and
+histograms.</p>
+<p>S03. <a
+href="https://www.jstatsoft.org/article/view/v059i10">Wickham, Tidy
+Data</a></p>
+<p>Used in chapter 3. One variable per column, one observation per row,
+and one table per observational unit.</p>
+<p>S04. <a
+href="https://pandas.pydata.org/docs/reference/api/pandas.merge.html">pandas
+merge documentation</a></p>
+<p>Used in chapter 3. Join cardinality validation and pandas null-key
+behavior.</p>
+<p>S05. <a
+href="https://pandas.pydata.org/docs/user_guide/scale.html">pandas
+scaling guidance</a></p>
+<p>Used in chapter 3. In-memory scaling, reducing loaded data, and
+chunking.</p>
+<p>S06. <a
+href="https://www.itl.nist.gov/div898/handbook/eda/eda.htm">NIST
+exploratory data analysis</a></p>
+<p>Used in chapter 4. Exploratory graphics and assumption checking.</p>
+<p>S07. <a
+href="https://itl.nist.gov/div898/handbook/prc/section3/prc312.htm">NIST
+intervals for paired differences</a></p>
+<p>Used in chapter 5. Paired mean-difference confidence intervals.</p>
+<p>S08. <a
+href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html">SciPy
+bootstrap</a></p>
+<p>Used in chapter 5. Bootstrap methods and paired resampling.</p>
+<p>S09. <a
+href="https://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf">ASA
+statement on p values</a></p>
+<p>Used in chapter 5. Interpretation limits of p values and
+threshold-only decisions.</p>
+<p>S10. <a
+href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc463.htm">NIST
+multiple comparisons</a></p>
+<p>Used in chapter 5. Bonferroni control for preselected multiple
+comparisons.</p>
+<p>S11. <a href="https://miguelhernan.org/whatifbook">Causal Inference
+What If</a></p>
+<p>Used in chapter 7, 13. Counterfactual causal framework and further
+reading.</p>
+<p>S12. <a
+href="https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm">NIST
+design selection</a></p>
+<p>Used in chapter 7. Comparative, screening, and response-surface
+experiment objectives.</p>
+<p>S13. <a
+href="https://www.columbia.edu/~ks20/stochastic-I/stochastic-I-LL.pdf">Columbia
+notes on Little's law</a></p>
+<p>Used in chapter 8. Little’s law, consistent system boundaries, and
+time averages.</p>
+<p>S14. <a
+href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc32.htm">NIST
+process monitoring</a></p>
+<p>Used in chapter 8. Control limits versus specification limits.</p>
+<p>S15. <a href="https://otexts.com/fpp3/tscv.html">Forecasting
+Principles and Practice on time-series cross-validation</a></p>
+<p>Used in chapter 8. Time-ordered rolling-origin evaluation.</p>
+<p>S16. <a
+href="https://sre.google/sre-book/monitoring-distributed-systems/">Google
+SRE monitoring</a></p>
+<p>Used in chapter 8. Latency, traffic, errors, saturation, and symptoms
+versus causes.</p>
+<p>S17. <a
+href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying
+evals for AI agents</a></p>
+<p>Used in chapter 9. Agent task, trial, grader, transcript, and outcome
+distinctions.</p>
+<p>S18. <a href="https://arxiv.org/abs/2306.05685">Zheng and colleagues
+on LLM judges</a></p>
+<p>Used in chapter 9. Documented judge position, verbosity, and
+self-enhancement biases; no universal accuracy claim.</p>
+<p>S19. <a
+href="https://scikit-learn.org/stable/modules/calibration.html">scikit-learn
+probability calibration</a></p>
+<p>Used in chapter 9. Calibration versus discrimination and reliability
+diagrams.</p>
+<p>S20. <a
+href="https://scikit-learn.org/stable/common_pitfalls.html">scikit-learn
+common pitfalls</a></p>
+<p>Used in chapter 10. Training-only preprocessing and leakage
+prevention.</p>
+<p>S21. <a
+href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn
+cross-validation</a></p>
+<p>Used in chapter 10. Grouped and time-aware cross-validation.</p>
+<p>S22. <a href="https://arxiv.org/abs/2207.07048">Kapoor and Narayanan
+on leakage</a></p>
+<p>Used in chapter 10. Leakage risks in machine-learning-based
+science.</p>
+<p>S23. <a
+href="https://scikit-learn.org/stable/modules/model_evaluation.html">scikit-learn
+model-evaluation metrics</a></p>
+<p>Used in chapter 10. Classification and regression metric
+definitions.</p>
+<p>S24. <a href="https://arxiv.org/abs/1810.03993">Model Cards for Model
+Reporting</a></p>
+<p>Used in chapter 10. Structured reporting of model use, performance,
+and limitations.</p>
+<p>S25. <a href="https://www.w3.org/TR/prov-primer/">W3C PROV
+primer</a></p>
+<p>Used in chapter 11. Entities, activities, and agents in
+provenance.</p>
+<p>S26. <a
+href="https://dash.harvard.edu/entities/publication/73120378-8764-6bd4-e053-0100007fdf3b">Rubin
+on inference with missing data</a></p>
+<p>Used in chapter 11. Missing-data mechanisms and the conditions behind
+ignoring missingness.</p>
+<p>S27. <a
+href="https://geopandas.org/en/stable/docs/user_guide/projections.html">GeoPandas
+projections</a></p>
+<p>Used in chapter 11. Coordinate reference systems and assigning versus
+transforming coordinates.</p>
+<p>S28. <a href="https://arxiv.org/abs/1803.09010">Gebru and colleagues
+on datasheets</a></p>
+<p>Used in chapter 11. Dataset motivation, composition, collection, use,
+and documentation.</p>
+<p>S29. <a href="https://wesmckinney.com/book/">Python for Data
+Analysis</a></p>
+<p>Used in chapter 13. Legally available author online book and
+practical reading path; no text reproduced.</p>
+<p>S30. <a href="https://clauswilke.com/dataviz/">Fundamentals of Data
+Visualization</a></p>
+<p>Used in chapter 13. Author manuscript for visualization reading; no
+figures or text reproduced.</p>
+<p>S31. <a href="https://www.openintro.org/book/os/">OpenIntro
+Statistics</a></p>
+<p>Used in chapter 13. Foundational statistics reading recommendation
+and official availability.</p>
+<p>S32. <a href="https://www.itl.nist.gov/div898/handbook/">NIST
+engineering statistics</a></p>
+<p>Used in chapter 13. Engineering-statistics reference reading
+recommendation.</p>
+<p>S33. <a href="https://www.statlearning.com/">An Introduction to
+Statistical Learning</a></p>
+<p>Used in chapter 13. Authors’ statistical-learning book and Python
+edition reading recommendation.</p>
+<p>S34. <a href="https://otexts.com/fpp3/">Forecasting Principles and
+Practice</a></p>
+<p>Used in chapter 13. Forecasting book reading recommendation.</p>
+<p>M01. <a
+href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projection-matrices-and-least-squares/">MIT
+projections and least squares</a></p>
+<p>Used in chapter 14. Geometric connection between projection and
+least-squares residuals.</p>
+<p>M02. <a
+href="https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc541.htm">NIST
+mean vector and covariance matrix</a></p>
+<p>Used in chapter 14. Sample covariance definition and
+observation/feature orientation.</p>
+<p>M03. <a
+href="https://numpy.org/doc/stable/reference/generated/numpy.cov.html">NumPy
+covariance</a></p>
+<p>Used in chapter 14. rowvar orientation and covariance API.</p>
+<p>M04. <a
+href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/">MIT
+singular value decomposition</a></p>
+<p>Used in chapter 14. Matrix factorization and singular directions;
+original example derived separately.</p>
+<p>M05. <a
+href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html">NumPy
+singular value decomposition</a></p>
+<p>Used in chapter 14. Returned U, singular values, Vh and
+reconstruction conventions.</p>
+<p>M06. <a
+href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn
+clustering guide</a></p>
+<p>Used in chapter 14. Clustering objectives and contrasting method
+assumptions.</p>
+<p>M07. <a
+href="https://scikit-image.org/docs/stable/user_guide/data_types.html">scikit-image
+image data types</a></p>
+<p>Used in chapter 15. Image dtype and range conventions.</p>
+<p>M08. <a
+href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.convolve.html">SciPy
+multidimensional convolution</a></p>
+<p>Used in chapter 15. Convolution and boundary-mode concepts; companion
+implements its own explicit NumPy reflection convention.</p>
+<p>M09. <a
+href="https://numpy.org/doc/stable/reference/routines.fft.html">NumPy
+discrete Fourier transform conventions</a></p>
+<p>Used in chapter 15. Frequency ordering, transform normalization,
+real-valued transform representation.</p>
+<p>M10. <a
+href="https://scikit-image.org/docs/stable/api/skimage.morphology.html">scikit-image
+morphology</a></p>
+<p>Used in chapter 15. Erosion, dilation, opening, closing and
+footprints.</p>
+<p>M11. <a
+href="https://scikit-image.org/docs/stable/api/skimage.measure.html">scikit-image
+region measurements</a></p>
+<p>Used in chapter 15. Connected-region measurement, spacing, area and
+coordinates.</p>
+<p>M12. <a href="https://web.stanford.edu/~boyd/cvxbook/">Boyd and
+Vandenberghe Convex Optimization</a></p>
+<p>Used in chapter 18. Author-hosted legal book availability and further
+study of convex problems.</p>
+<p>M13. <a
+href="https://docs.scipy.org/doc/scipy/tutorial/optimize.html">SciPy
+optimization guide</a></p>
+<p>Used in chapter 18. Distinguishing solver families and problem
+structures.</p>
+<p>M14. <a
+href="https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty">NIST
+law of propagation of uncertainty</a></p>
+<p>Used in chapter 18. First-order sensitivities, variances, and
+covariance terms.</p>
+<p>M15. <a
+href="https://www.itl.nist.gov/div898/handbook/mpc/section5/mpc56.htm">NIST
+uncertainty budgets and sensitivity coefficients</a></p>
+<p>Used in chapter 18. Relating input uncertainty to output uncertainty
+contributions.</p>
+<p>M16. <a
+href="https://www.bipm.org/documents/20126/2071204/JCGM_101_2008_E.pdf/325dcaad-c15a-407c-1105-8b7f322d651c">JCGM
+101 Monte Carlo propagation</a></p>
+<p>Used in chapter 18. Propagation of distributions, conditions and
+separation from validity of the input model.</p>
+<p>G01. <a
+href="https://docs.geopandas.org/en/stable/docs/user_guide/projections.html">Projections</a></p>
+<p>Used in chapter 16. CRS metadata, declaring versus transforming
+coordinates, and GeoPandas longitude/latitude order. Does not establish
+the accuracy of any particular local projection.</p>
+<p>G02. <a href="https://proj.org/en/stable/geodesic.html">Geodesic
+calculations</a></p>
+<p>Used in chapter 16. Distinguishing ellipsoidal geodesics from the
+chapter’s explicitly spherical approximation. No claim that the
+synthetic sphere is survey grade.</p>
+<p>G03. <a
+href="https://geopandas.org/en/stable/docs/user_guide/mergingdata.html">Merging
+data</a></p>
+<p>Used in chapter 16. Attribute versus spatial joins, geometric
+predicates, one-to-many matches and nearest-join options. Rectangle
+half-open assignment is an original teaching convention.</p>
+<p>G04. <a
+href="https://gdal.org/en/stable/tutorials/geotransforms_tut.html">Geotransform
+tutorial</a></p>
+<p>Used in chapter 16. Six affine coefficients, top-left corner
+coordinates, north-up negative pixel height and half-cell center offset.
+Zonal overlap example independently derived.</p>
+<p>G05. <a
+href="https://gdal.org/en/stable/tutorials/gdal_grid_tut.html">GDAL Grid
+tutorial</a></p>
+<p>Used in chapter 16. Inverse distance to a power interpolation and
+neighborhood parameters. Chapter fixture uses all points, p=2, zero
+smoothing; measurement-only variance is separately derived.</p>
+<p>G06. <a
+href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-analyst/how-kriging-works.html">How
+Kriging works</a></p>
+<p>Used in chapter 16. Kriging relies on a modeled spatial relationship;
+prediction error is conditional on model assumptions. No kriging
+implementation or empirical calibration is claimed.</p>
+<p>G07. <a
+href="https://nsojournals.onlinelibrary.wiley.com/doi/10.1111/ecog.02881">Cross-validation
+strategies for data with temporal spatial hierarchical or phylogenetic
+structure</a></p>
+<p>Used in chapter 16. Structured validation must reflect interpolation
+versus transfer to new space; dependence can make random validation
+misleading. Not a universal endorsement of every blocking design.</p>
+<p>G08. <a
+href="https://pysal.org/esda/stable/user-guide/global_morans_i.html">Global
+Spatial Autocorrelation with Moran’s I</a></p>
+<p>Used in chapter 16. Moran statistic, spatial lag and random-label
+permutation reference. Chapter explicitly fixes locations and weights
+and defines its own right tail; it does not assert generic point-process
+CSR or reproduce software default p-value semantics.</p>
+<p>G09. <a
+href="https://geodacenter.github.io/workbook/6a_local_auto/lab6a.html">Local
+Spatial Autocorrelation 1</a></p>
+<p>Used in chapter 16. Local quadrant membership differs from
+significance; local tests raise multiplicity and permutation-resolution
+issues. Chapter implements descriptive local values only.</p>
+<p>G10. <a
+href="https://www.cdc.gov/pcd/issues/2010/jan/09_0073.htm">Choropleth
+Map Design for Cancer Incidence Part 2</a></p>
+<p>Used in chapter 16. Warnings about ecological inference, small
+denominators and geographic pattern interpretation. Chapter has no
+disease analysis and its four-person numerical counterexample is
+original.</p>
+<p>F01. <a
+href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/mit15_401f08_lec02/">Present
+Value Relations Slides 1–36</a></p>
+<p>Used in chapter 17. Present value, compounding and real/nominal
+consistency. All project cash flows, break-even numbers and IRR
+counterexample are original calculations; no recommended discount
+rate.</p>
+<p>F02. <a
+href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/mit15_401f08_lec13/">Portfolio
+Theory Slides 1–46</a></p>
+<p>Used in chapter 17. Weighted portfolio returns and the role of
+covariance in mean-variance analysis. Matrices and return observations
+are synthetic, not estimates for named assets.</p>
+<p>F03. <a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1991.tb02669.x">Foundations
+of Portfolio Theory</a></p>
+<p>Used in chapter 17. Historical foundation and conditional role of
+mean-variance portfolio criteria. Does not supply the chapter’s
+numerical portfolio or current market claims.</p>
+<p>F04. <a href="https://alo.mit.edu/publications/page/18/">The
+Statistics of Sharpe Ratios</a></p>
+<p>Used in chapter 17. Sharpe estimates have sampling error; simple
+annualization is not generally valid under serial correlation. The
+additive-sum variance identity is derived independently in the
+chapter.</p>
+<p>F05. <a href="https://arxiv.org/abs/cond-mat/0104295">On the
+coherence of Expected Shortfall</a></p>
+<p>Used in chapter 17. Expected shortfall definitions need care for
+discontinuous distributions; precise tail probability mass. Chapter uses
+upper-tail loss confidence alpha, which must not be confused with an
+author’s lower-tail probability convention.</p>
+<p>F06. <a
+href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated">How
+Fees and Expenses Affect Your Investment Portfolio</a></p>
+<p>Used in chapter 17. Fees reduce returns and the capital left to
+compound. Does not justify the toy 0.001 transaction cost as realistic
+or current.</p>
+<p>F07. <a
+href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf">The
+Probability of Backtest Overfitting</a></p>
+<p>Used in chapter 17. Trying many alternatives creates selection risk
+even without a direct look-ahead bug; retain experiment history. Chapter
+does not implement CSCV or estimate a PBO.</p>
+<p>F08. <a href="https://doi.org/10.1111/j.1540-6261.1997.tb03818.x">The
+Delisting Bias in CRSP Data</a></p>
+<p>Used in chapter 17. Historical research example of missing delisting
+outcomes. Supports auditing terminal observations, not a claim that
+current CRSP data still has the reported defect.</p>
+</main><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="sources.html">Evidence &amp; sources</a></span></div></footer><script src="assets/math.js"></script><script src="assets/data.js"></script><script src="assets/expanded-data.js"></script><script src="assets/expanded-math.js"></script><script src="assets/labs.js"></script><script src="assets/expanded-labs.js"></script><script src="assets/site.js"></script></body></html>

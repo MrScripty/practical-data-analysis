@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>8 Analyze a system over time · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html" aria-current="page"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html" aria-current="page"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 8</span><span>5 min read</span></div><h1 id="8-analyze-a-system-over-time">8 Analyze a system over time</h1>
+<h2 id="keep-order-when-order-matters">Keep order when order
+matters</h2>
+<p>A table of durations loses the sequence that produced them. For a
+queue, sequence is part of the system: arrivals create backlog, backlog
+affects waiting, model residency changes future setup costs, and
+failures can trigger retries. Preserve event time and analyze the
+sequence alongside the distribution.</p>
+<p>Start with a timeline of arrivals, completions, queue length, active
+work, and resource usage. Use a common time axis. A burst of arrivals
+followed by a growing queue tells a different story from a stable
+arrival rate followed by collapsing completion throughput.</p>
+<p>Distinguish rates from counts. Ten completions in one second and ten
+in one minute are different workloads. When resampling events into
+windows, state the window width and boundary convention. A five-minute
+average can hide a ten-second overload that violates a latency
+requirement.</p>
+<h2 id="queue-length-connects-demand-and-delay">Queue length connects
+demand and delay</h2>
+<p>A queue accumulates when arrivals exceed departures over an interval.
+Even when average capacity exceeds average demand, bursts and variable
+service times can create waits. High utilization leaves less spare
+capacity to absorb variation, so optimizing utilization alone can damage
+responsiveness.</p>
+<p>Little's law relates long-run average number in a stable system,
+throughput, and average time in that same system: L equals lambda times
+W. If a stable service completes 2 jobs per second and jobs spend an
+average of 5 seconds in the chosen boundary, the average number inside
+is 10. The boundary must match: queue-only counts go with queue-only
+waiting time; in-system counts include service. Finite windows, changing
+backlog, and inconsistent populations can break a naive application. <a
+href="https://www.columbia.edu/~ks20/stochastic-I/stochastic-I-LL.pdf">Columbia
+notes on Little's law</a></p>
+<p>Use the relationship as a consistency check and a way to think, not
+as a promise that doubling hardware will halve latency. Bottlenecks,
+parallelism limits, and workload composition can change when capacity
+changes.</p>
+<h2 id="measure-a-queue-by-area">Measure a queue by area</h2>
+<p>A time-weighted average queue length is the area under the
+queue-length curve divided by elapsed time. If the queue has length 2
+for 9 seconds and length 20 for 1 second, the average is 3.8. Averaging
+just two recorded states gives 11, which is wrong because the states
+lasted different durations.</p>
+<p>For an event-based trace, reconstruct queue length after each arrival
+or dispatch and integrate until the next change. Make the event ordering
+convention explicit when several events share a timestamp. For a sampled
+gauge, account for the sampling interval and missing samples.</p>
+<p>This idea generalizes to memory residency and resource utilization.
+Event counts do not equal time exposure. A state that appears in one log
+line may persist much longer than a state that produces a hundred
+lines.</p>
+<h2 id="separate-stable-patterns-from-change">Separate stable patterns
+from change</h2>
+<p>Time-series behavior can include a long-term trend, recurring daily
+or weekly structure, abrupt shifts, and irregular variation. Compare
+like periods before declaring an anomaly. Monday morning traffic may
+differ from Saturday night even when nothing is broken.</p>
+<p>For a performance predictor, plot residuals over time: observed
+duration minus predicted duration, or a clearly defined ratio. Break
+them down by model, device, size range, and warm or cold state. A
+persistent positive residual in one cohort suggests underprediction
+there. A global average near zero can hide offsetting cohort errors.</p>
+<p>Do not calculate prediction errors using predictions regenerated
+after the observation. Preserve the prediction made at the time.
+Otherwise the model can appear calibrated because it has already learned
+from the outcome you are testing.</p>
+<h2 id="drift-and-anomalies-are-hypotheses">Drift and anomalies are
+hypotheses</h2>
+<p>Drift means that a relevant distribution or relationship changes.
+Inputs may become longer, a model may load more slowly, a new task
+family may arrive, or the relationship between features and duration may
+shift. An anomaly is an observation or interval that is unusual relative
+to a chosen reference. The reference is part of the claim.</p>
+<p>A detector that fires frequently can create more work than it saves.
+Evaluate its false alarms, missed important events, detection delay, and
+operational response. An alert should connect to an action or
+investigation. “Some number changed” is rarely enough.</p>
+<p>Control charts are one established way to monitor a process against a
+reference under stated assumptions. Their limits are not interchangeable
+with specification limits or user requirements. A stable process can
+consistently fail a requirement, and a useful process can show a genuine
+change without becoming unacceptable. <a
+href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc32.htm">NIST
+process monitoring</a></p>
+<h2 id="validate-on-the-future-direction">Validate on the future
+direction</h2>
+<p>When forecasting or predicting time-dependent outcomes, a random
+train-test split can allow future information to influence a model
+evaluated on the past. Use splits that respect time. A rolling-origin
+evaluation repeatedly trains using data available before a cutoff and
+tests on a later period. The forecast horizon and retraining schedule
+should resemble the intended use. <a
+href="https://otexts.com/fpp3/tscv.html">Forecasting Principles and
+Practice on time-series cross-validation</a></p>
+<p>Temporal splitting does not automatically eliminate leakage. A
+feature computed from a full dataset, a label added later, or duplicated
+entities across periods may still reveal future information. Audit when
+every feature becomes available.</p>
+<h2 id="keep-unfinished-work-visible">Keep unfinished work visible</h2>
+<p>Suppose one scheduler completes 90 short tasks and leaves 10 long
+tasks unresolved at cutoff. Another completes all 100. Comparing mean
+latency only among completed tasks can reward the first policy for
+leaving work behind.</p>
+<p>Useful summaries include completion fraction by a fixed deadline,
+unresolved count and age, failure count, and a curve of the fraction
+completed over elapsed time. If you use survival-analysis methods for
+right-censored observations, their assumptions about censoring need
+attention. A policy-dependent timeout or selective abandonment can be
+informative censoring rather than a harmless observation cutoff.</p>
+<p>For a beginner, a clear joint report of completion and latency is
+often safer than a sophisticated estimator used without understanding
+the missing outcomes. Do not rank an unfinished run as “faster” merely
+because its last observed completion occurred early. The snapshot
+distinguishes a completed-batch metric from the last accepted completion
+for this reason.</p>
+<h2 id="a-small-operational-view">A small operational view</h2>
+<p>A useful first dashboard can be small: request or task volume,
+completion or error rate, latency distribution, and saturation or
+backlog, each with a meaningful time window. Google SRE's monitoring
+guidance emphasizes latency, traffic, errors, and saturation, while
+distinguishing user-visible symptoms from internal causes. <a
+href="https://sre.google/sre-book/monitoring-distributed-systems/">Google
+SRE monitoring</a></p>
+<p>Use the dashboard to notice and localize a change. Use a saved trace
+and controlled analysis to explain it. Dashboards are optimized for
+repeated observation; investigations need richer context and a record of
+competing explanations.</p>
+<p>Exercise: construct a queue that has the same average arrival rate in
+two runs but different burst patterns. Predict which should have larger
+waits, then simulate or calculate the sequence. Keep the service rule
+fixed. Explain why the average arrival rate alone was insufficient.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="07-find-what-a-change-causes.html"><small>← Previous</small>7 Find out what a change causes</a><a href="09-evaluate-agents-and-judges.html"><small>Next →</small>9 Evaluate agents and their judges</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#measure-a-queue-by-area">Measure a queue by area</a><a href="#keep-unfinished-work-visible">Keep unfinished work visible</a><a href="#a-small-operational-view">A small operational view</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

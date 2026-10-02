@@ -1,0 +1,440 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>16 Analyze places and spatial relationships · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html" aria-current="page"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html" aria-current="page"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 16</span><span>18 min read</span></div><h1 id="16-analyze-places-and-spatial-relationships">16 Analyze places
+and spatial relationships</h1>
+<h2 id="start-with-a-location-decision">Start with a location
+decision</h2>
+<p>Suppose a research team has collected reports about service access in
+a city. Each report names a place, an observation date, a waiting time,
+and the source from which the claim came. The team can investigate only
+three places next week. Should it revisit an apparent cluster of long
+waits, visit an area with few reports, or verify an unusually severe
+individual report?</p>
+<p>A map is useful here because location might explain which reports
+share a service catchment, which are close enough to revisit together,
+and where evidence is absent. A map can also mislead: duplicated reports
+can look like independent corroboration, a district centroid can look
+like an exact address, and a densely populated area can look unusually
+troubled simply because more people report from it.</p>
+<p>The project in this chapter is to build an auditable spatial summary
+before choosing a follow-up. We will connect a table to geometry, join
+observations to areas, sample a raster, interpolate an unobserved value,
+and ask whether similar values are neighbors. Every coordinate and value
+in the companion is invented. These are proposed techniques for a
+Nearwork-style research workflow, not claims about Nearwork's present
+implementation or private data.</p>
+<p>The output is a shortlist with reasons and limitations. It should
+preserve the evidence that supports each location, the spatial
+assumptions that change its ranking, and the gaps that additional
+research could resolve. The mathematical tools help identify those gaps;
+they do not decide which consequence matters most.</p>
+<h2 id="give-a-location-a-meaning-before-calculating-distance">Give a
+location a meaning before calculating distance</h2>
+<p>A point is a pair of coordinates. A line is an ordered sequence of
+points. A polygon represents an area, possibly with holes and
+disconnected parts. These vector geometries describe objects. A raster
+divides a domain into cells and records a value for each cell. It
+describes a sampled field or a collection of area summaries. Neither
+representation is inherently more accurate; the geometry must match what
+was measured.</p>
+<p>A coordinate reference system, or CRS, tells software what
+coordinates mean on Earth. Geographic coordinates commonly express
+longitude and latitude in degrees. Projected coordinates place locations
+on a plane, often in meters. Declaring a CRS interprets existing
+coordinates; transforming a CRS calculates new coordinates for the same
+locations. GeoPandas distinguishes these operations as set_crs and
+to_crs. Reassigning a meter-based CRS to degree values does not convert
+them. <a
+href="https://docs.geopandas.org/en/stable/docs/user_guide/projections.html">GeoPandas
+projections</a></p>
+<p>The coordinate order is another part of the contract. GeoPandas
+geometries use x, y; geographic points are therefore longitude,
+latitude. A data source may publish latitude first. A pair of
+valid-looking numbers can be swapped without producing a software error.
+Check a known landmark and the total extent before trusting the layer.
+Store the source CRS with the data rather than guessing it from a
+plausible map.</p>
+<p>Consider two invented points one degree apart in longitude. On a
+sphere, the distance is about 111.195 km at the equator and 55.597 km at
+latitude 60 degrees. The difference comes from geometry, not a change in
+the coordinate unit. Longitude lines converge toward the poles. Treating
+degrees as uniform Cartesian distances would erase that fact.</p>
+<p>For a sphere of radius R, convert angles to radians and
+calculate:</p>
+<pre class="text"><code>h = sin²((latitude2 - latitude1)/2)
+    + cos(latitude1) cos(latitude2) sin²((longitude2 - longitude1)/2)
+distance = 2 R arcsin(sqrt(h))</code></pre>
+<p>The companion uses R = 6,371.0088 km and clips h to [0, 1] to protect
+against floating-point overshoot. This great-circle calculation is a
+teaching approximation. Production work that needs ellipsoidal accuracy
+should use a geodesic implementation and the correct datum. It also
+needs to distinguish straight-line distance from road travel time: a
+river crossing can dominate access even when two points are
+geographically close.</p>
+<p>Use a projection suitable for the study extent and the quantity being
+measured. A local engineering distance problem and a country-wide area
+comparison may need different projections. All plane projections distort
+something; meter units alone do not guarantee adequate distance or area
+accuracy. Web display coordinates are not automatically an appropriate
+measurement system. Verify distortion against the required tolerance,
+especially across large extents or projection-zone boundaries. PROJ's
+geodesic routines provide a separate route for ellipsoidal distance
+calculations. <a href="https://proj.org/en/stable/geodesic.html">PROJ
+geodesic calculations</a></p>
+<h2 id="turn-reports-into-a-spatial-join">Turn reports into a spatial
+join</h2>
+<p>Imagine a four-kilometer square divided into four
+two-by-two-kilometer zones. These are synthetic local Cartesian
+coordinates in kilometers; we do not attach a real-world EPSG code.
+Seven reports occur at A = (0.5, 0.5), B = (1.5, 0.5), C = (2, 0.5), D =
+(3.5, 0.5), E = (0.5, 2.5), F = (2.5, 2.5), and G = (4, 1).</p>
+<p>A spatial join attaches zone attributes to reports whose geometry
+satisfies a predicate. An attribute join instead matches identifiers
+such as zone_id. Production spatial predicates distinguish containment
+from intersection and boundary-inclusive relationships. A join can
+return several matches for one observation, particularly with
+overlapping polygons. Inspect the match cardinality rather than assuming
+that one input row remains one output row. <a
+href="https://geopandas.org/en/stable/docs/user_guide/mergingdata.html">GeoPandas
+spatial joins</a></p>
+<p>C lies exactly on the boundary between the two southern zones. G lies
+on the eastern outer boundary. A strict interior rule leaves both
+unmatched. A boundary-inclusive rule assigns C twice and includes G. To
+expose the arithmetic, the teaching code uses half-open rectangles:
+include the lower x and y bounds, exclude the upper bounds.</p>
+<pre class="python"><code>from gis_finance_examples import rectangle_join
+points = [[.5,.5], [1.5,.5], [2.,.5], [3.5,.5],
+          [.5,2.5], [2.5,2.5], [4.,1.]]
+zones = [[0,0,2,2], [2,0,4,2], [0,2,2,4], [2,2,4,4]]
+matches = rectangle_join(points, zones, boundary=&quot;half_open&quot;)
+assert matches == [[0], [0], [1], [1], [2], [3], []]</code></pre>
+<p>The four counts are 2, 2, 1, and 1; G remains outside the defined
+domain. Half-open rectangles are a transparent partition for this grid,
+not a universal administrative-boundary rule. A real boundary case might
+need authoritative address assignment, an explicit tie rule, or an
+ambiguity flag. It should not silently disappear in an inner join.</p>
+<p>Record the input count, distinct observation count, unmatched count,
+and observations with multiple matches. After aggregation, reconcile the
+total to the assignment rule. If a report intentionally belongs to two
+overlapping service catchments, its repeated membership may be
+legitimate; counting those memberships as two independent reports is
+not.</p>
+<p>Before joining real polygons, inspect empty or invalid geometries,
+holes, duplicated features, boundary versions, and CRS agreement. A
+geometry repair can change an area, so preserve the original and
+document the repair. A spatial index speeds candidate lookup but does
+not replace the exact relationship test. For nearest joins, keep the
+measured distance, set a defensible search limit, and inspect ties. The
+nearest known facility is not necessarily an eligible, open, or
+reachable facility.</p>
+<p><img src="../assets/figures/13_geometry_and_raster_support.svg"
+alt="Spatial joins and raster support" /></p>
+<p>Figure 11. Left: seven invented reports and four zones; C and G
+expose boundary choices. Right: four raster cells with values 10, 20,
+30, and 40. The orange cross has a bilinear estimate of 25, while the
+dashed polygon has an area-weighted mean of 20. Both panels use local
+kilometer coordinates and equal axis scales; they do not depict a real
+place.</p>
+<h2 id="know-whether-a-raster-value-belongs-to-a-point-or-an-area">Know
+whether a raster value belongs to a point or an area</h2>
+<p>Chapter 15 treated an image as an array whose pixels could be
+calibrated into physical coordinates. A georeferenced raster adds an
+explicit transformation between pixel coordinates and map coordinates.
+An affine transformation can translate, scale, rotate, and shear a
+grid.</p>
+<p>In GDAL's convention, let c and r denote column and row coordinates
+measured from the upper-left pixel corner. With six coefficients g0
+through g5:</p>
+<pre class="text"><code>x = g0 + g1 c + g2 r
+y = g3 + g4 c + g5 r</code></pre>
+<p>For a north-up raster without rotation, g2 and g4 are zero, g1 is the
+pixel width, and g5 is a negative pixel height. The center of array
+element [r, c] uses c + 0.5 and r + 0.5 in this equation. Confusing
+corners with centers creates a half-cell displacement. <a
+href="https://gdal.org/en/stable/tutorials/geotransforms_tut.html">GDAL
+geotransform tutorial</a></p>
+<p>Our raster is [[10, 20], [30, 40]]. Each cell is two kilometers wide.
+The upper-left corner is (0, 4), so its transform is [0, 2, 0, 4, 0,
+−2]. The value 10 has center (1, 3); the value 40 has center (3, 1). To
+locate a world point in a rotated grid, solve the two-by-two linear
+system for c and r rather than assuming axis alignment. The companion
+rejects singular transforms.</p>
+<p>At (2, 2), four cells meet. Our containing-cell convention selects
+row 1, column 1 and returns 40. Bilinear interpolation between centers
+gives each of the four values weight 1/4 and returns 25. Neither
+computation resolves what the raster actually measures. If cells contain
+land-cover category codes, averaging their numeric labels is
+meaningless. If cells hold a smooth field sampled at centers, bilinear
+interpolation can be sensible. If they contain total population,
+careless interpolation can invent or lose population.</p>
+<p>An area query needs another operation. Let A_j be the area of overlap
+between the query polygon and cell j, and v_j the cell value. If v_j is
+a cell-average intensity, an area-weighted mean is:</p>
+<pre class="text"><code>zone mean = sum(A_j v_j) / sum(A_j)</code></pre>
+<p>For the rectangle from (0, 1) to (3, 4), overlap areas are 4, 2, 2,
+and 1 square kilometers. Its mean is (4×10 + 2×20 + 2×30 + 1×40)/9 = 20.
+An unweighted mean of all touched cells would be 25. A cell-center
+inclusion rule can give yet another answer. Report which support and
+boundary convention you used.</p>
+<p>NoData is not zero. If a missing cell is excluded, the denominator
+must also exclude its area, and the result describes only the observed
+part. The companion returns the observed area fraction alongside the
+mean. A zone with ten percent coverage should not look as certain as one
+with complete coverage. For extensive counts, allocating a fraction of a
+cell total by overlap area assumes uniform density within that cell.
+State that assumption and check whether it is credible.</p>
+<p>When combining rasters, align CRS, resolution, pixel origin, bounds,
+time, units, and NoData masks. Resampling onto a smaller pixel size
+creates more array elements, not more independent measurements. Do not
+multiply a sample size by the number of interpolated cells.</p>
+<h2
+id="interpolate-a-missing-value-without-inventing-certainty">Interpolate
+a missing value without inventing certainty</h2>
+<p>Suppose three sensors at (0, 0), (2, 0), and (0, 2) measure 10, 20,
+and 30 in a common unit. We want a value at (1, 0). Inverse-distance
+weighting, or IDW, gives closer observations larger weights:</p>
+<pre class="text"><code>raw weight_i = 1 / distance_i^p
+normalized weight_i = raw weight_i / sum(raw weights)
+prediction = sum(normalized weight_i × observed value_i)</code></pre>
+<p>The power p controls how quickly influence decreases with distance.
+Our example uses p = 2, all three observations, no smoothing, and a
+Euclidean local distance. This is one specified estimator, not a default
+that fits every surface. GDAL documents the same family of weighted
+interpolators and the role of the neighborhood and power. <a
+href="https://gdal.org/en/stable/tutorials/gdal_grid_tut.html">GDAL
+gridding methods</a></p>
+<p>The distances are 1, 1, and square root of 5. Raw weights are 1, 1,
+and 1/5; normalized weights are 5/11, 5/11, and 1/11. The prediction is
+180/11, or approximately 16.364. At a sensor location, the companion
+returns that sensor's value rather than dividing by zero. It rejects
+duplicate source coordinates because conflicting colocated measurements
+require an explicit aggregation or measurement model.</p>
+<pre class="python"><code>import numpy as np
+from gis_finance_examples import idw
+estimate, weights = idw([[0,0], [2,0], [0,2]],
+                        [10,20,30], [1,0], power=2)
+assert np.isclose(estimate, 180/11)
+assert np.allclose(weights, [5/11, 5/11, 1/11])</code></pre>
+<p>A weighted average cannot exceed the input range when all weights are
+nonnegative. That is a useful test, but it is not an accuracy guarantee.
+IDW can smooth across an actual barrier, favor a dense cluster of
+redundant sensors, or extend a plausible-looking surface beyond the
+observed region. More decimal places do not repair those
+assumptions.</p>
+<p>Now separate two uncertainties. If independent sensor errors each
+have variance 4, and weights a_i are fixed, the variance contributed by
+measurement error is sum(a_i² × 4). Here it is 204/121, approximately
+1.686, giving a standard deviation of about 1.298. In matrix form it is
+a^T C a, where C is the sensor-error covariance. Correlated errors add
+off-diagonal terms.</p>
+<p>This calculation omits interpolation error: the true field at the
+query point need not equal the weighted combination of true sensor
+values. It also omits uncertain sensor locations, calibration bias, and
+uncertainty about the power and neighborhood. Label it measurement-only
+uncertainty, not a predictive confidence interval.</p>
+<p>Leave-one-location-out validation illustrates the distinction. Hide
+each sensor, predict it using the other two, and compare the prediction
+with its measurement. The three predictions are 25, 16.667, and 13.333.
+Their root mean squared error is about 13.088, far larger than the
+measurement-only standard deviation. These are only three invented
+cases, but they show why a smooth interpolated map is not evidence of
+small predictive error.</p>
+<p>Kriging takes another route: specify how covariance changes with
+separation, then choose weights using that covariance and a mean model.
+Under a known mean, a simple form solves C a = c, where C describes
+covariance among observed locations and c describes covariance with the
+prediction location. Ordinary kriging adds an unknown constant mean and
+a sum-to-one constraint. The resulting uncertainty is conditional on the
+covariance model and its parameters. Learning those assumptions needs
+data; the word kriging is not a guarantee of calibration. <a
+href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-analyst/how-kriging-works.html">Esri
+on kriging assumptions</a></p>
+<p>For the follow-up decision, test a simple baseline, compare errors by
+distance to evidence, and hold out contiguous regions when the intended
+use is predicting new regions. A random split of neighboring points can
+test local interpolation while being advertised as geographic transfer.
+Structured cross-validation should reflect the deployment question. <a
+href="https://nsojournals.onlinelibrary.wiley.com/doi/10.1111/ecog.02881">Roberts
+and colleagues on structured cross-validation</a></p>
+<h2 id="express-a-neighborhood-as-a-matrix">Express a neighborhood as a
+matrix</h2>
+<p>Location often makes observations dependent. Nearby reports may share
+weather, transport, service staff, or a common source document. Counting
+them as independent can make uncertainty too small. The same issue
+appeared in paired scheduler runs and repeated agent evaluations; here
+the relationship is partly spatial.</p>
+<p>A spatial weights matrix W records which locations count as
+neighbors. For four locations along a chain, connect 1 to 2, 2 to 3, and
+3 to 4. Start with symmetric binary connections and then divide each row
+by its number of neighbors:</p>
+<pre class="text"><code>W = [[0,   1,   0,   0],
+     [1/2, 0,   1/2, 0],
+     [0,   1/2, 0,   1/2],
+     [0,   0,   1,   0]]</code></pre>
+<p>Each row sums to one, so W x is the neighbor mean, often called a
+spatial lag. If x = [1, 2, 3, 4], the lag is [2, 2, 3, 3]. Row
+standardization has made W asymmetric: location 1 gives all its weight
+to location 2, while location 2 gives only half its weight back. This is
+intentional, not a floating-point defect.</p>
+<p>Define neighbors for the question. Shared polygon edges, shared
+corners, a distance threshold, the k nearest sites, and a travel-time
+network produce different graphs. A k-nearest rule can connect very
+distant places in sparse areas. A distance rule can leave islands with
+no neighbors. Our row-standardization function rejects islands so the
+analyst must decide whether to expand the neighborhood, analyze them
+separately, or use a justified zero-lag convention. Do not let a library
+default silently redefine the population.</p>
+<p>The effect of dependence can be seen without a spatial model. If n
+measurements each have variance sigma² and every distinct pair has
+correlation rho, then:</p>
+<pre class="text"><code>variance of mean = sigma² / n × [1 + (n - 1) rho]
+effective n under this model = n / [1 + (n - 1) rho]</code></pre>
+<p>This follows by expanding the variance of a sum into its n variance
+terms and n(n−1) covariance terms. For n = 9 and rho = 1/4, the
+effective n is 3. It is an illustrative equal-correlation model, not an
+estimator of effective sample size for every map. Real dependence
+changes with separation and with how observations were collected.</p>
+<h2 id="compare-moran-i-with-the-right-null">Compare Moran I with the
+right null</h2>
+<p>A global Moran statistic asks whether deviations from the overall
+mean tend to align across neighbor links. Write z = x − mean(x) and S0 =
+sum of all entries of W. Then:</p>
+<pre class="text"><code>I = (n / S0) × (z^T W z) / (z^T z)</code></pre>
+<p>The denominator measures overall variation. The numerator sums
+products of neighboring deviations, weighted by W. Matching signs
+contribute positively; opposite signs contribute negatively. Constant
+attributes make the denominator zero, so I is undefined. The companion
+raises an error rather than assigning zero.</p>
+<p>For the four-location chain, z = [−1.5, −0.5, 0.5, 1.5]. Its squared
+length is 5. The weighted cross-product is 2. Because S0 = n = 4, I =
+0.4. This statistic depends on the chosen graph and transformation; it
+is not a universally bounded Pearson correlation. PySAL describes the
+statistic and its randomization reference distribution. <a
+href="https://pysal.org/esda/stable/user-guide/global_morans_i.html">PySAL
+global Moran I</a></p>
+<p>The null used here is random labeling: hold the four locations, W,
+and the multiset of observed values fixed, and consider every assignment
+of those values to locations equally likely. This does not simulate new
+event locations or test a homogeneous point process. It also does not
+test whether one site's value causes its neighbor's value.</p>
+<p>There are only 4! = 24 assignments, so we can enumerate them. Their
+mean I is −1/(4−1) = −1/3. Two assignments have I at least 0.4, giving a
+right-tailed exact p-value of 2/24 = 1/12, approximately 0.0833. A
+visibly ordered pattern can therefore coexist with limited evidence in a
+tiny dataset. The reference is slightly negative, not zero.</p>
+<p><img src="../assets/figures/14_neighborhoods_and_randomization.svg"
+alt="Neighborhood dependence and the permutation null" /></p>
+<p>Figure 12. Left: the synthetic values and their row-standardized
+neighbor means. Right: the complete distribution over 24 label
+assignments. The orange line is the observed statistic and the dotted
+line is the exact null mean. The test was specified as right-tailed
+before examining the result.</p>
+<p>For larger datasets, draw B random permutations and compute:</p>
+<pre class="text"><code>Monte Carlo p = [1 + count(permuted I &gt;= observed I)] / (B + 1)</code></pre>
+<p>The companion uses B = 999 and seed 1601. Its p-value is 0.069, while
+exhaustive enumeration gives 0.0833. That difference is Monte Carlo
+variability, not a different observed map. The smallest possible
+simulated p-value is 1/(B+1). Re-running until a preferred p-value
+appears would be another form of selection. A left-tailed or two-sided
+question needs a prespecified tail rule; do not choose the direction
+after viewing the statistic.</p>
+<p>Random labeling requires exchangeability under the null. If district
+populations, measurement precision, or urban and rural baselines differ
+systematically, unrestricted shuffling of raw rates may be
+inappropriate. A positive I could reflect a broad trend, a shared
+covariate, or source duplication. Use the statistic to motivate a more
+specific model and collection plan, and validate that model's residual
+assumptions separately.</p>
+<h2 id="keep-local-discovery-and-aggregation-honest">Keep local
+discovery and aggregation honest</h2>
+<p>A local statistic identifies contributions around particular
+locations. One convention uses m2 = sum(z_i²)/n and I_i = z_i × (Wz)_i /
+m2. In the chain, local values are [0.6, 0.2, 0.2, 0.6], whose average
+equals the global I because S0 = n. Other software conventions and
+inference schemes need to be checked explicitly.</p>
+<p>A positive local value can mean high near high or low near low. The
+sign alone does not label a problematic area. Nor does quadrant
+membership establish significance. Local tests generally use a
+location-specific randomization design, and running many of them creates
+a multiple-testing problem. GeoDa's methodological discussion separates
+these questions. <a
+href="https://geodacenter.github.io/workbook/6a_local_auto/lab6a.html">GeoDa
+local spatial autocorrelation</a></p>
+<p>For 100 valid tests of true null hypotheses, each using a 0.05
+threshold, the expected number of false rejections is at most 5; it
+equals 5 when each test has exact 5 percent size. This does not require
+the tests to be independent. Bonferroni uses 0.05/100 = 0.0005 to bound
+the family-wise error by 0.05. With only 999 random permutations, the
+minimum Monte Carlo p-value is 0.001, so that threshold cannot be
+reached. False-discovery procedures address a different error criterion
+and have dependence assumptions of their own. Report the tested family,
+correction, permutation count, and sensitivity to W. Avoid presenting an
+uncorrected cluster map as a confirmed set of findings.</p>
+<p>Aggregation can change the pattern before any test is run. Put values
+[1, 1] in the northern row of a two-by-two grid and [9, 9] in the
+southern row. Group by rows and the area means are 1 and 9. Group by
+columns and both means are 5. The underlying four values are unchanged.
+This is an original illustration of the modifiable areal unit problem:
+the scale and arrangement of reporting units affect summaries. Repeat a
+consequential comparison under plausible alternative boundaries and
+resolutions.</p>
+<p>A related mistake is inferring individual relationships from area
+averages. Consider two people in one synthetic zone with x values [1, 2]
+and outcomes [4, 3], and two in another with x values [3, 4] and
+outcomes [6, 5]. Within either zone, the outcome decreases by one when x
+increases by one. Across zone means, it increases by one. The positive
+relationship between area means cannot establish the individual
+relationship. The CDC's map-interpretation guidance warns about this
+ecological fallacy and unstable rates in small populations. <a
+href="https://www.cdc.gov/pcd/issues/2010/jan/09_0073.htm">CDC on
+interpreting geographic patterns</a></p>
+<h2 id="make-the-map-answer-the-research-question">Make the map answer
+the research question</h2>
+<p>Show counts when the question concerns total workload, and rates when
+the question concerns frequency per eligible person, service
+opportunity, or time at risk. A zone with 20 reports out of 1,000
+opportunities has a 2 percent rate; one with 10 out of 100 has a 10
+percent rate. The first has more reports and the second has a higher
+rate. Neither fact alone identifies the best intervention.</p>
+<p>A choropleth of a rate needs its denominator, observation period,
+boundary version, and missing-data treatment. Use a sequential color
+scale for ordered positive quantities and a diverging scale for
+deviations around a meaningful reference. Keep color limits comparable
+when showing change across maps. Distinguish no observations, missing
+data, and measured zero. Pair small-denominator rates with uncertainty
+or a denominator map. A blank area can be a collection gap, not an area
+without problems.</p>
+<p>For a Nearwork-style system, preserve a location record separately
+from a source claim. Useful fields include original place text,
+candidate coordinates, geometry type, CRS, resolution or accuracy
+radius, geocoding method and date, source URL, observation time,
+extraction confidence, and whether the location is an event site or an
+organization's office. Do not place an uncertain region-level claim at a
+crisp centroid without indicating that uncertainty. Several documents
+repeating one report remain one underlying event unless independent
+evidence says otherwise.</p>
+<p>A defensible shortlist might include one severe well-supported
+report, one uncertain boundary case, and one poorly observed region
+where another observation could change the conclusion. The reason for
+each choice should point back to a question the visit can answer.
+Sampling only the darkest areas of the map can reinforce the original
+collection bias.</p>
+<h2 id="practice-and-a-stopping-rule">Practice and a stopping rule</h2>
+<p>Run python companion/gis_finance_examples.py and python
+companion/check_gis_finance_examples.py from the expanded book root. For
+the snippets above, run Python with the companion directory on its
+import path. The checks exercise boundary cases, affine inverses,
+NoData, exact IDW values, and the complete four-location Moran null.
+They do not certify a production GIS pipeline.</p>
+<p>First, change the rectangle boundary convention and reconcile every
+report. Second, replace one raster cell with NoData and explain both the
+new mean and the lost coverage. Third, change the chain to a complete
+graph: every other location becomes a neighbor. The companion checks
+that every label arrangement then has I = −1/3. A graph that removes the
+relevant notion of locality can remove the question you intended to
+ask.</p>
+<p>Finally, write a one-paragraph collection decision. Name the
+locations, the uncertainty each visit can reduce, the information that
+might reverse your choice, and the privacy limits on publishing precise
+locations. Stop when the geometry, measurement support, and evidence are
+reliable enough for that decision. A more elaborate map is useful only
+if it improves the next observation or action.</p>
+<section class="lab" data-lab="gis" id="lab-gis" aria-label="Interactive lab: A boundary changes the join"><span class="eyebrow">Interactive lab · change one thing</span><h2>A boundary changes the join</h2><p class="labintro">Move point C across the shared border and choose what it means to be inside.</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><div class="controls"><label>Boundary rule<select name="rule"><option value="half_open">Half-open</option><option value="strict">Strict interior</option><option value="closed">Closed / boundary included</option></select></label><label>Point C x-coordinate <output class="xout">2.0 km</output><input name="pointx" aria-label="Point C x coordinate in kilometers" type="range" min="1.5" max="2.5" value="2" step="0.1"></label></div><div class="metrics"></div><svg class="chart" viewBox="0 0 590 320" role="img" aria-label="Seven synthetic points over four rectangular regions"></svg><p class="results" aria-live="polite"></p><details><summary>Inspect all point-to-region matches</summary><table class="outputtable"><thead><tr><th>Point</th><th>Region matches</th></tr></thead><tbody></tbody></table></details><p class="labnote">Synthetic planar coordinates in kilometers from chapter 16, not latitude/longitude. Strict excludes all boundaries; closed includes them and can duplicate matches; half-open includes lower/left boundaries and excludes upper/right boundaries. The outer upper/right boundary is intentionally excluded in the half-open rule.</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="15-measure-images-as-data.html"><small>← Previous</small>15 Measure images as data</a><a href="17-analyze-cash-flows-returns-and-risk.html"><small>Next →</small>17 Analyze cash flows returns and risk</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#practice-and-a-stopping-rule">Practice and a stopping rule</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

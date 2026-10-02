@@ -1,0 +1,329 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>14 Reason with vectors and matrices · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html" aria-current="page"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html" aria-current="page"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 14</span><span>12 min read</span></div><h1 id="14-reason-with-vectors-and-matrices">14 Reason with vectors and
+matrices</h1>
+<h2 id="start-with-a-collection-of-runs">Start with a collection of
+runs</h2>
+<p>Suppose you have hundreds of scheduler traces. You can already
+calculate waiting time, setup time, execution time, and final completion
+time. You now want to answer a different question: which runs fail in
+similar ways, and which measurements move together?</p>
+<p>A vector is an ordered collection of numbers. One run might become a
+vector containing its mean task wait, total GPU setup time, and peak
+queue length. A matrix stacks those vectors into rows. This
+representation lets you compare runs, fit a simple prediction model, and
+compress a large table into a few informative directions.</p>
+<p>The order matters. The vector [wait, setup, queue] is not
+interchangeable with [queue, wait, setup]. Store column names and units
+alongside the array. Keep run identifiers outside the numerical feature
+matrix so you can return to the underlying traces. A row is still a
+measurement of a particular run under particular conditions, even after
+its identifier disappears from a plot.</p>
+<p>This chapter uses small invented arrays so every calculation can be
+checked by hand. It does not claim that the pinned scheduler traces have
+the clusters or principal directions shown here. The project is to learn
+a representation you could apply to those traces after defining
+comparable features.</p>
+<h2 id="read-matrix-operations-as-data-operations">Read matrix
+operations as data operations</h2>
+<p>Let X have n rows and p columns. Its shape is n by p: n observations
+of p features. A feature column is a vector of length n. A row is a
+vector of length p. The transpose, written X^T, exchanges rows and
+columns.</p>
+<p>The dot product multiplies corresponding entries and adds the
+products. For x = [3, 1] and w = [2, 4], x dot w = 3 × 2 + 1 × 4 = 10. A
+weighted score is a dot product. This is useful only when the weights
+convert the features into a meaningful shared objective. Adding seconds
+to bytes with arbitrary weights can produce a number without producing a
+useful decision.</p>
+<p>Matrix multiplication applies many dot products at once. If X is n by
+p and a weight vector w has p entries, X @ w produces n scores. The
+inner dimensions must agree. In NumPy, @ is matrix multiplication; *
+multiplies matching entries element by element. Confusing these
+operations can yield the right shape and the wrong analysis.</p>
+<p>A matrix can also represent a transformation. A two by two rotation
+matrix changes coordinate axes without changing Euclidean lengths. A
+diagonal matrix can scale one axis much more than another. These
+transformations affect how a cloud of observations looks and how
+distances behave. Preprocessing is therefore part of the model, not a
+neutral cleanup step.</p>
+<h2 id="a-projection-explains-one-direction">A projection explains one
+direction</h2>
+<p>Take x = [3, 1] and the direction u = [1, 1]. We want the point on
+the line through u that is closest to x. Every point on that line has
+the form a u, for some scalar a. The squared error is the sum of the
+squared entries of x − a u.</p>
+<p>Expanding gives x dot x − 2a(x dot u) + a²(u dot u). Its derivative
+with respect to a is −2(x dot u) + 2a(u dot u). Setting the derivative
+to zero gives:</p>
+<pre class="text"><code>a = (x dot u) / (u dot u)
+projection = a u</code></pre>
+<p>Here a = 4 / 2 = 2, so the projection is [2, 2]. The residual is [1,
+−1]. Its dot product with u is zero, which means the residual is
+perpendicular to the direction. The original vector has been separated
+into an explained component along u and an unexplained component across
+it.</p>
+<p>This geometry is the foundation of least squares. A model represents
+the directions it can explain. Fitting finds the closest point inside
+that space, under a chosen error measure. Perpendicular residuals are a
+geometric property of the fitted model; they do not imply that the model
+has captured the mechanism generating the data. <a
+href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/least-squares-determinants-and-eigenvalues/projection-matrices-and-least-squares/">MIT
+on projections and least squares</a></p>
+<p><img src="../assets/figures/07_projection_and_pca.svg"
+alt="Projection and principal component reconstruction" /></p>
+<p>Figure 7. Left: the vector [3, 1] projected onto the line through [1,
+1]. Right: four synthetic observations compressed onto their first
+principal direction. Dotted segments show information lost during
+reconstruction. Both panels use equal axis scaling so geometric angles
+and distances remain meaningful.</p>
+<h2 id="a-tiny-fitted-model">A tiny fitted model</h2>
+<p>Imagine three synthetic measurements of duration at workload levels
+0, 1, and 2: the durations are 1, 2, and 2 seconds. Fit duration =
+intercept + slope × workload. The feature matrix contains a column of
+ones for the intercept and a column of workload values.</p>
+<pre class="python"><code>import numpy as np
+A = np.array([[1., 0.], [1., 1.], [1., 2.]])
+y = np.array([1., 2., 2.])
+beta = np.linalg.lstsq(A, y, rcond=None)[0]
+predicted = A @ beta
+residual = y - predicted</code></pre>
+<p>The fitted intercept is 7/6 and the slope is 1/2. Predictions are
+7/6, 5/3, and 13/6. Residuals are −1/6, 1/3, and −1/6. Their sum is
+zero, and their dot product with workload is zero. Those are the two
+perpendicularity conditions, one for each feature column.</p>
+<p>The normal equations write this condition as A^T A beta = A^T y. They
+help explain the geometry. For computation, use a least-squares solver
+rather than explicitly calculating an inverse of A^T A. Nearly redundant
+columns can make fitted coefficients unstable; forming A^T A worsens
+conditioning. Predictions may remain similar while individual
+coefficients swing. Report that instability instead of assigning causal
+meaning to each coefficient.</p>
+<p>This three-point fit is a calculation lesson, not a useful
+performance predictor. A real model needs held-out runs, residual
+checks, plausible feature definitions, and observations across the
+workload range where it will be used. Fitting an intercept and slope
+does not establish that changing workload alone causes the fitted
+change.</p>
+<h2 id="distance-depends-on-your-units-and-purpose">Distance depends on
+your units and purpose</h2>
+<p>Suppose each observation contains execution time in seconds and
+memory in MiB. Let A = [1, 100], B = [2, 100], and C = [1, 110]. Raw
+Euclidean distance calls B closer to A: the distances are 1 and 10.
+Convert time from seconds to milliseconds and they become 1,000 and 10.
+The nearest neighbor changes even though the physical observations did
+not.</p>
+<p>Choose scales before interpreting distance. If a one-second change
+and a 20-MiB change are the meaningful reference differences, divide the
+two columns by 1 and 20. The resulting distances from A are 1 for B and
+0.5 for C. The scales encode a substantive choice about similarity.</p>
+<p>Standardization instead subtracts each training-set mean and divides
+by its standard deviation. This produces unitless features and can
+prevent a large numerical scale from dominating. It gives high weight to
+features with small variation, including possibly uninformative noise.
+Constant columns need explicit handling because their standard deviation
+is zero. Fit the transformation on the training data and reuse it on
+validation and future data.</p>
+<p>Euclidean distance adds squared coordinate differences before taking
+a square root. Manhattan distance adds absolute differences, reducing
+the influence of one unusually large coordinate difference. Cosine
+similarity compares directions through the normalized dot product. It
+can treat two very different magnitudes as identical: [1, 2] and [10,
+20] have the same direction. The zero vector has no defined direction.
+Pick the measure for the question, and record the treatment of zeros and
+missing features.</p>
+<p>Mahalanobis distance also accounts for covariance: a change along a
+direction with large usual variation counts less than a similarly sized
+change along a stable direction. Its squared form is d^T S^−1 d, where d
+is the difference and S is a covariance estimate. Estimating S reliably
+becomes difficult when features approach or exceed independent
+observations. Redundant features can make it singular. Regularization or
+dimensionality reduction introduces assumptions that belong in the
+analysis record; an inverse operation cannot create the missing
+information.</p>
+<h2 id="covariance-records-how-deviations-align">Covariance records how
+deviations align</h2>
+<p>Use four synthetic observations of two comparable, already scaled
+indices:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Observation</th>
+<th>Duration index</th>
+<th>Load index</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Both column means are 2.5. Subtract the means to obtain a centered
+matrix C. A sample covariance multiplies paired deviations and divides
+their sum by n − 1. The covariance matrix for this example is:</p>
+<pre class="text"><code>S = C^T C / (n - 1)
+S = [[5/3, 1  ],
+     [1,   5/3]]</code></pre>
+<p>The diagonal entries are the sample variances. The off-diagonal value
+1 says that deviations tend to have the same sign. Correlation divides
+covariance by the product of the two standard deviations. Here the
+correlation is 1 / (5/3) = 0.6. It is unitless, whereas covariance
+carries the product of the feature units.</p>
+<p>Covariance describes joint variation; a shared workload driver could
+produce it without either measured feature causing the other. If runs
+come from different workload families, inspect within-family
+relationships before interpreting the pooled covariance. In NumPy,
+observations in rows require rowvar=False when calling np.cov. That
+orientation option matters. <a
+href="https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc541.htm">NIST
+on covariance matrices</a>, <a
+href="https://numpy.org/doc/stable/reference/generated/numpy.cov.html">NumPy
+covariance</a></p>
+<h2 id="pca-finds-directions-with-large-variation">PCA finds directions
+with large variation</h2>
+<p>Principal component analysis asks which unit-length direction
+captures the most variation of the centered observations. Projecting C
+onto a unit vector v gives scores C v. Their sample variance is v^T S v.
+The maximizing direction is an eigenvector of S: applying S to that
+direction changes its length but not its direction.</p>
+<p>For our matrix, the first direction is [1, 1] / square root of 2. Its
+variance is 8/3. The perpendicular direction [1, −1] / square root of 2
+has variance 2/3. The total variance is 10/3, so the first direction
+retains 80 percent and the second retains 20 percent.</p>
+<p>Keep only the first component and reconstruct each point. A and B
+both become [1.5, 1.5]; C and D both become [3.5, 3.5]. The total
+squared reconstruction error is 2. This calculation makes the tradeoff
+concrete: a compact representation merges observations that differed in
+the discarded direction.</p>
+<p>A singular value decomposition computes this efficiently. For a
+centered real matrix C, write C = U diag(s) V^T. The columns of V supply
+feature directions; U multiplied by s supplies observation scores.
+Squaring each singular value and dividing by n − 1 gives the
+corresponding sample variance. NumPy returns V^T as its third result,
+named Vt or Vh. <a
+href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/">MIT
+on SVD</a>, <a
+href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html">NumPy
+SVD</a></p>
+<pre class="python"><code>X = np.array([[1., 2.], [2., 1.], [3., 4.], [4., 3.]])
+mean = X.mean(axis=0)
+C = X - mean
+U, singular, Vt = np.linalg.svd(C, full_matrices=False)
+scores = C @ Vt.T
+variance = singular**2 / (len(X) - 1)
+reconstructed = scores[:, :1] @ Vt[:1] + mean</code></pre>
+<p>The sign of a principal direction is arbitrary. An implementation may
+return the negative direction and negative scores with exactly the same
+reconstruction. Equal or nearly equal principal variances can also allow
+unstable directions within a stable subspace. Compare reconstructions or
+subspaces before treating a flipped plot as a changed phenomenon.</p>
+<p>PCA preserves variance under the preprocessing and squared-error
+metric you chose. It does not preserve every rare failure or every
+feature useful for prediction. A rare safety violation may occupy a
+low-variance direction. Choose the number of components using
+reconstruction diagnostics and the downstream task, then validate on
+held-out data. A two-dimensional scatter plot is a view of the data, not
+the full dataset.</p>
+<h2 id="clusters-are-hypotheses-about-similarity">Clusters are
+hypotheses about similarity</h2>
+<p>K-means chooses K centers and assigns points to reduce the sum of
+squared distances to their assigned centers. For the four points above,
+two natural centers are [1.5, 1.5] and [3.5, 3.5], with total
+within-cluster squared distance 2. The result summarizes the geometry
+you supplied.</p>
+<p>You can see one assignment-and-update step without a clustering
+library. Start the centers at A and C. Assign each observation to the
+nearer center, then replace each center by the mean of its assigned
+observations. In this fixture, A and B share one center and C and D
+share the other. The updated centers are [1.5, 1.5] and [3.5, 3.5], and
+another assignment step leaves the groups unchanged.</p>
+<pre class="python"><code>centers = X[[0, 2]].copy()
+squared = ((X[:, None, :] - centers[None, :, :])**2).sum(2)
+labels = squared.argmin(axis=1)
+centers = np.array([X[labels == k].mean(0) for k in range(2)])
+within_error = ((X - centers[labels])**2).sum()
+assert np.isclose(within_error, 2.0)</code></pre>
+<p>This code exposes the core operation for a case where both groups are
+nonempty. A general implementation must handle empty groups,
+convergence, initialization, and scale. Hierarchical clustering builds a
+sequence of merges under a chosen rule for distance between groups.
+Density-based methods identify dense connected regions and can leave
+some observations unassigned. Neither approach removes the need to
+justify features and neighborhood definitions.</p>
+<p>The optimization can depend on initialization. Its preference for
+compact groups around means can fit some datasets poorly, especially
+elongated groups, unequal densities, or isolated outliers. Other
+clustering methods make other assumptions. Changing the distance,
+feature scale, feature selection, or number of clusters may change the
+answer. <a
+href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn
+clustering guide</a></p>
+<p>For an engineering investigation, inspect representative traces and
+unusual members of each group. A cluster containing high setup time may
+suggest repeated model loading; it does not establish that loading
+caused the final delay. Compare the group's composition by workload,
+resource, and policy. Check whether groups recur in fresh runs and
+whether recognizing them changes a practical decision.</p>
+<p>Do not evaluate a cluster solely by how separated it looks on a PCA
+plot. Projection can hide overlap or create an impression of separation.
+Check stability in the full chosen feature space and explain why the
+groups matter operationally.</p>
+<h2 id="more-dimensions-can-make-closeness-less-useful">More dimensions
+can make closeness less useful</h2>
+<p>Consider an explicit model: two independent points each have d
+independent standard normal coordinates. Their coordinate differences
+are independent normal variables with variance 2. Each squared
+difference has mean 2 and variance 8. Adding over d coordinates gives
+expected squared distance 2d and variance 8d. The standard deviation
+divided by the mean is therefore square root of (2/d).</p>
+<p>Under this model, relative variation in squared distances decreases
+as dimensions increase. Our simulation of 5,000 pairs gives coefficients
+of variation about 1.00, 0.45, 0.14, and 0.044 for 2, 10, 100, and 1,000
+dimensions. Distances grow while their relative differences shrink.</p>
+<p><img src="../assets/figures/08_distance_concentration.svg"
+alt="Concentration of squared distances" /></p>
+<p>Figure 8. Squared distances divided by their theoretical mean for
+independent Gaussian features. Boxes show the middle half of simulated
+pairs and whiskers the fifth through ninety-fifth percentiles. The model
+and normalization are essential: this is not a universal claim about
+every embedding or high-dimensional dataset.</p>
+<p>Adding irrelevant features can bury meaningful differences. More
+features also require more observations to estimate flexible
+relationships. Start with features connected to plausible mechanisms,
+compare against a simpler representation, and test whether the
+additional dimensions improve retrieval, prediction, or diagnosis on
+fresh cases.</p>
+<h2 id="practice-and-a-stopping-rule">Practice and a stopping rule</h2>
+<p>Run python companion/math_examples.py and python
+companion/check_math_examples.py from the expanded book root. The first
+writes the arrays, six figures, and numerical results; the second checks
+identities and known answers. Then alter one feature's units in the
+distance example and verify that explicit physical scaling restores the
+original comparison.</p>
+<p>Exercise: explain why retaining 80 percent of variance does not
+guarantee retaining 80 percent of useful diagnostic information. A
+useful answer names a decision and a low-variance feature that could
+control it. For example, one infrequent permission violation may matter
+more than ordinary variations in execution time.</p>
+<p>For your own traces, stop when the representation supports a clear
+next action: identifying a reproducible failure family, finding
+comparable runs, or producing a simpler predictive baseline. A more
+elaborate embedding is worthwhile when it improves that action under a
+fair evaluation.</p>
+<section class="lab" data-lab="vectors" id="lab-vectors" aria-label="Interactive lab: Projection and information loss"><span class="eyebrow">Interactive lab · change one thing</span><h2>Projection and information loss</h2><p class="labintro">Rotate a direction or keep fewer principal components. Which information survives?</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><div class="controls"><label>View<select name="view"><option value="projection">Vector projection</option><option value="pca">PCA reconstruction</option></select></label><label>Direction angle <output class="angleout">45°</output><input name="angle" aria-label="Projection angle in degrees" type="range" min="0" max="180" step="1" value="45"></label><label>Retained PCA components<select name="rank"><option value="0">0 · mean only</option><option value="1" selected>1 · leading direction</option><option value="2">2 · both directions</option></select></label></div><div class="metrics"></div><svg class="chart" viewBox="0 0 590 320" role="img" aria-label="Vector projection or PCA reconstruction plot"></svg><p class="results" aria-live="polite"></p><p class="labnote">Synthetic chapter 14 examples. Projection uses x = (3, 1). PCA uses the four centered observations from the book; its axes are fixed for this dataset, with 80% and 20% of the variance. This is not a general PCA solver.</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="13-practice-with-the-companion.html"><small>← Previous</small>13 Practice with the companion</a><a href="15-measure-images-as-data.html"><small>Next →</small>15 Measure images as data</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#a-tiny-fitted-model">A tiny fitted model</a><a href="#practice-and-a-stopping-rule">Practice and a stopping rule</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

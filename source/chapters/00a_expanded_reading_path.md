@@ -1,0 +1,9 @@
+# A route through the expanded edition
+
+The first thirteen chapters develop the central habit of this book: begin with a decision, build trustworthy measurements, compare fairly, and turn evidence into a bounded next action. The additional chapters extend that practice to mathematical representations and new kinds of data. You can use them when your project needs them without postponing your first useful analysis.
+
+Chapter 14 begins with a table of run measurements and introduces vectors, projections, least squares, covariance, PCA, and clustering. Chapter 15 turns pixels into a physical measurement and shows how filtering, segmentation, geometry, and calibration change the answer. Chapter 16 adds location: coordinate systems, spatial relationships, surfaces, and the sampling decisions behind a map. Chapter 17 follows cash flows and returns through time, with explicit attention to compounding, uncertainty, and honest backtesting. Chapter 18 chooses a worker count under a model, then asks how numerical error and uncertain inputs affect the choice.
+
+The calculations use small worked numbers before general notation. The extra companion examples are synthetic and identified as such. They are meant to expose the arithmetic and assumptions, while the original scheduler investigation remains tied to its pinned reports and traces. Each project ends with a decision or a validation question so that the mathematics stays connected to engineering work.
+
+If mathematical notation is unfamiliar, use the reference at the end when a symbol appears. Read a formula as a sequence of operations on quantities with names and units. Then run the example, check its known answer, and change one assumption. Understanding which changes ought to affect the result is a strong defense against code that runs successfully and answers the wrong question.

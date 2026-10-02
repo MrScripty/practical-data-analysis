@@ -1,0 +1,184 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>9 Evaluate agents and their judges · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html" aria-current="page"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html" aria-current="page"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 9</span><span>7 min read</span></div><h1 id="9-evaluate-agents-and-their-judges">9 Evaluate agents and their
+judges</h1>
+<h2 id="an-agent-has-an-outcome-and-a-path">An agent has an outcome and
+a path</h2>
+<p>For an agent, a final answer can look correct while the process was
+unsafe, wasteful, or incomplete. A coding agent might claim success
+without passing tests. A research agent might produce fluent prose with
+unsupported citations. An agent that operates tools might reach the
+right final state after taking an unauthorized intermediate action.</p>
+<p>Define outcome checks and process checks separately. Outcome checks
+ask whether the requested result exists and satisfies its requirements.
+Process checks ask whether the agent respected constraints, used tools
+correctly, preserved data, and stayed within budgets. A trace helps
+explain a failure, but a long trace is not evidence of a good
+outcome.</p>
+<p>Anthropic's engineering guidance distinguishes tasks, repeated
+trials, grading logic, transcripts, and final environment outcomes. That
+vocabulary is useful because it prevents one agent response from being
+mistaken for the whole evaluation. It also emphasizes that different
+grader types have different strengths. <a
+href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying
+evals for AI agents</a></p>
+<p>For a Chrema-style system that observes agents and evaluates other
+agents, this suggests a concrete starting schema: task, attempt, agent
+version, environment version, trace reference, final-state evidence,
+individual checks, judge version, and review status. This is a proposed
+design for the stated use case, not a description of Chrema's current
+implementation.</p>
+<h2 id="write-a-rubric-that-can-fail">Write a rubric that can fail</h2>
+<p>“Good answer” is too vague for a reliable label. Break the task into
+observable criteria. For a research answer, criteria might include
+whether each central factual claim has a supporting source, whether
+cited pages were actually retrieved, whether the response answers the
+question, and whether uncertain facts are labeled appropriately.</p>
+<p>A rubric should include positive, negative, and borderline examples.
+Specify what counts as failure. If a missing critical source is
+unacceptable, do not allow strong writing style to average it away. Some
+requirements should be gates rather than weighted scores.</p>
+<p>Use deterministic checks where they are appropriate: schema validity,
+exact state, unit-test results, file existence, constraints, or known
+invariants. Use model-assisted or human review for aspects that require
+interpretation. Keep the component results so you can tell whether an
+aggregate changed because of factuality, usefulness, formatting, or a
+different mix of tasks.</p>
+<h2 id="build-an-evaluation-set-around-intended-use">Build an evaluation
+set around intended use</h2>
+<p>Collect ordinary cases, difficult cases, known regressions, and
+important rare failures. These sets serve different purposes. A
+production-weighted set estimates expected behavior under a stated
+workload distribution. An adversarial set probes whether a failure is
+possible. A regression suite protects previously fixed behaviors. Do not
+pool them into one average without explaining the weights.</p>
+<p>Keep task families and difficulty indicators. Where possible, compare
+variants on the same tasks and planned number of trials. Preserve a
+development set for prompt and rubric iteration and a held-out set for
+confirmation. If evaluation tasks are repeatedly exposed to the agent or
+used to tune its prompts, they no longer provide a clean estimate of
+performance on unseen tasks.</p>
+<p>Also version the environment. Tool availability, repository contents,
+permission settings, network behavior, and service responses can change
+results. A prompt alone is not a reproducible agent test case.</p>
+<h2 id="repeated-trials-reveal-reliability">Repeated trials reveal
+reliability</h2>
+<p>A single success shows that an agent can solve a task once under the
+tested conditions. It does not show that it will do so reliably. Run
+repeated trials when stochastic behavior matters, keeping the task and
+environment controlled.</p>
+<p>Report trial-level success and task-level summaries. “At least one
+success in several attempts” measures a different capability from “every
+attempt succeeds.” If independent attempts each have success probability
+p, the chance of at least one success in k attempts is 1 minus (1 minus
+p) to the kth power. Real retries may be dependent, so do not use that
+formula blindly.</p>
+<p>A system that succeeds after five attempts may be useful when a
+verifier can cheaply select the correct result. It may be unacceptable
+when the first wrong action causes irreversible damage. Reliability must
+be evaluated in the actual interaction pattern, including budgets and
+verification costs.</p>
+<h2 id="a-judge-is-another-measurement-system">A judge is another
+measurement system</h2>
+<p>A model judge can reduce review cost, but its output is an imperfect
+measurement. It may prefer an answer's position, length, or stylistic
+resemblance to its own outputs. The MT-Bench and Chatbot Arena study
+documented position, verbosity, and self-enhancement biases in the
+judges it examined. Its results do not establish that every modern judge
+is accurate on your domain. <a
+href="https://arxiv.org/abs/2306.05685">Zheng and colleagues on LLM
+judges</a></p>
+<p>Validate the judge on a relevant, independently labeled sample. Blind
+reviewers to the agent variant when possible. Randomize answer order in
+pairwise comparisons and test whether reversing order changes the
+result. Keep the judge prompt, model, decoding settings, and rubric
+version. Inspect disagreements rather than only the agreement rate.</p>
+<p>Human labels also need a process. Use clear instructions, multiple
+reviewers for an overlap sample, and a way to resolve consequential
+disagreements. A reference label is an adjudicated standard for the
+test, not infallible truth. Record ambiguity rather than forcing every
+case into a confident binary label.</p>
+<h2 id="read-a-confusion-matrix">Read a confusion matrix</h2>
+<p>The companion contains 1,080 synthetic trial records across 120
+invented tasks, three illustrative agent variants, and three trials per
+variant. The fields named human_pass and judge_pass are generated
+labels. No real humans or deployed agents produced this dataset. It
+exists to make the following arithmetic reproducible.</p>
+<p>Using the generated reference label as the standard, the synthetic
+judge has 762 true positives, 182 true negatives, 85 false positives,
+and 51 false negatives. Its overall agreement is 944 divided by 1,080,
+about 87.4 percent.</p>
+<p>That single percentage hides an important asymmetry. Among the 267
+reference failures, the judge accepts 85, about 31.8 percent. Among the
+847 judge-approved cases, 85, about 10.0 percent, are reference
+failures. These are different denominators and answer different
+questions. The first is a false-positive rate; the second is the
+fraction of approved outputs that are wrong under the reference.</p>
+<p>If a judge is a release gate, false approvals may be especially
+costly. If it is a triage tool that sends uncertain cases to a reviewer,
+coverage and review cost also matter. Choose the operating threshold for
+the consequence, then validate it on data not used to choose the
+threshold.</p>
+<h2 id="calibration-is-a-separate-question">Calibration is a separate
+question</h2>
+<p>A judge may emit a score that looks like a probability. Calibration
+asks whether cases assigned a given probability succeed at roughly that
+frequency. A score of 0.9 should not be interpreted as a 90 percent
+chance of passing merely because it lies between zero and one.</p>
+<p>Group predictions into a few bins, plot mean predicted probability
+against observed reference success, and show how many observations
+occupy each bin. The calibration chart in the companion has a very
+sparse middle because the synthetic judge tends to be either confident
+or doubtful. Its middle bin contains only four trials. A connecting line
+does not make that region well measured; the counts are essential to
+interpreting the apparent shape.</p>
+<p><img src="../assets/figures/05_synthetic_calibration.svg"
+alt="Synthetic judge calibration" /></p>
+<p>Figure 5. Generated judge probabilities compared with generated
+reference labels. Bin counts and the score distribution are shown. This
+is an illustration of calibration analysis, not evidence about Chrema or
+any real model judge.</p>
+<p>Calibration and discrimination are different. A model can rank likely
+successes above failures while its probabilities are too extreme. A
+well-calibrated low-information predictor can emit the base rate for
+every case and be poor at ranking. Evaluate both according to the
+intended decision. <a
+href="https://scikit-learn.org/stable/modules/calibration.html">scikit-learn
+probability calibration</a></p>
+<h2 id="cost-belongs-in-the-same-evaluation">Cost belongs in the same
+evaluation</h2>
+<p>Measure total cost of attempts, tools, retries, verification, and
+human review where relevant. “Cost per successful outcome” can be
+calculated as total evaluation cost divided by the number of verified
+successes for a defined workload. It includes failed attempts in the
+numerator. Calculating average cost only among successful attempts hides
+wasted work.</p>
+<p>That ratio is descriptive for the observed evaluation process. It is
+not automatically the expected cost of retrying until success. Such a
+claim needs a retry policy, dependence assumptions, stopping rules, and
+an account of tasks that may never succeed.</p>
+<p><img src="../assets/figures/06_synthetic_cost_quality.svg"
+alt="Synthetic agent cost and quality" /></p>
+<p>Figure 6. Synthetic mean cost and reference success for three
+invented variants. More expensive variants are not automatically
+preferable. The right choice depends on quality requirements, failure
+consequences, latency, and the production task mix.</p>
+<p>A Pareto-dominated variant is worse or equal on every chosen
+objective and strictly worse on at least one. Removing clearly dominated
+choices can simplify a decision. The remaining frontier still requires
+priorities; a plot cannot decide how much one additional success is
+worth.</p>
+<h2 id="a-practical-first-evaluation-for-chrema">A practical first
+evaluation for Chrema</h2>
+<p>Begin with a small set of representative tasks and explicit outcome
+checks. Run two versions on the same tasks, with repeated trials where
+affordable. Review an overlap sample independently. Compare results by
+task family, inspect the largest disagreements, and measure the judge's
+false approvals on known failures.</p>
+<p>Create a regression set from important real failures after they
+occur, but keep it separate from a fresh evaluation set. Track changes
+to the rubric as carefully as changes to the agent. If the judge changes
+and the score rises, you have not yet shown that the agent improved.</p>
+<p>Exercise: design one deterministic check, one model-assisted check,
+and one human-review question for an agent task you care about. Then
+describe a case that could pass all three while still failing the user's
+real goal. Use that counterexample to improve the evaluation.</p>
+<section class="lab" data-lab="judge" id="lab-judge" aria-label="Interactive lab: Agreement is only one denominator"><span class="eyebrow">Interactive lab · change one thing</span><h2>Agreement is only one denominator</h2><p class="labintro">Edit the confusion matrix and watch three apparently similar accuracy statements separate.</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><div class="controls"><label>True positives (TP)<input name="tp" type="number" min="0" max="1000000" step="1" value="762"></label><label>False positives (FP)<input name="fp" type="number" min="0" max="1000000" step="1" value="85"></label></div><div class="controls"><label>False negatives (FN)<input name="fn" type="number" min="0" max="1000000" step="1" value="51"></label><label>True negatives (TN)<input name="tn" type="number" min="0" max="1000000" step="1" value="182"></label></div><button type="button">Restore companion example</button><div class="metrics"></div><p class="results" aria-live="polite"></p><p class="labnote">Synthetic labels from the companion, not actual human review. Rows with repeated trials are not independent tasks. False-positive rate = FP / (FP + TN); false-discovery fraction = FP / (TP + FP).</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="08-analyze-a-system-over-time.html"><small>← Previous</small>8 Analyze a system over time</a><a href="10-analyze-training-and-model-results.html"><small>Next →</small>10 Analyze training data and model results</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#write-a-rubric-that-can-fail">Write a rubric that can fail</a><a href="#read-a-confusion-matrix">Read a confusion matrix</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

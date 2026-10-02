@@ -1,0 +1,267 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>15 Measure images as data · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html" aria-current="page"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html" aria-current="page"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 15</span><span>9 min read</span></div><h1 id="15-measure-images-as-data">15 Measure images as data</h1>
+<h2 id="turn-a-picture-into-a-defined-measurement">Turn a picture into a
+defined measurement</h2>
+<p>Suppose a camera records manufactured parts and you want to estimate
+the area of a bright component. The decision might be whether the
+component is within a size tolerance or whether a process is drifting.
+Before choosing an image algorithm, define the physical quantity, the
+acceptable uncertainty, and the acquisition conditions.</p>
+<p>An image is an array, but its entries acquire meaning from the camera
+and processing history. A value might represent a sensor count, a
+display brightness, a categorical class, or a calibrated physical
+quantity. A visually bright pixel is not automatically a linear
+measurement of illumination. Exposure, lens distortion, compression,
+color processing, and saturation can affect the result.</p>
+<p>The worked project uses an invented 64 by 64 grayscale image. A known
+square occupies rows 18 through 41 and columns 20 through 43, inclusive.
+It has 576 pixels. At an assumed spacing of 0.2 mm in both directions,
+its true synthetic area is 576 × 0.2 × 0.2 = 23.04 mm². We blur the
+boundary, add noise, insert one bright speck outside the object, and
+make one dark hole inside it. Because we generated the scene, we can
+distinguish the known object from what an algorithm measures.</p>
+<h2 id="keep-values-and-coordinates-explicit">Keep values and
+coordinates explicit</h2>
+<p>A grayscale array has two axes, usually row then column. A color
+array commonly adds a final channel axis. Image coordinates often start
+at the top left, with row increasing downward. A geometric Cartesian
+plot usually has vertical coordinates increasing upward. Always state
+the coordinate convention before comparing centroids, rotations, or
+trajectories.</p>
+<p>Integers and floating-point values need deliberate conversion. An
+unsigned eight-bit image stores values from 0 to 255; subtraction can
+wrap if performed in that type. Convert to a suitable floating type
+before arithmetic. Dividing by 255 makes a unitless 0-to-1
+representation; it does not perform sensor calibration or reverse a
+nonlinear color encoding. Image libraries also have dtype and range
+conventions that may differ from a general numerical array. <a
+href="https://scikit-image.org/docs/stable/user_guide/data_types.html">scikit-image
+image data types</a></p>
+<p>Preserve the original image, acquisition identifier, timestamp,
+exposure settings, pixel calibration, and every transformation. If you
+resize an image, update spacing. If you crop it, retain the offset
+needed to map coordinates back to the original. A missing pixel, a
+saturated pixel, and a genuine zero measurement are different
+states.</p>
+<h2 id="a-histogram-cannot-locate-an-object">A histogram cannot locate
+an object</h2>
+<p>A histogram counts pixels in intensity intervals. It can reveal
+saturation, limited contrast, or a rough separation between dark and
+bright regions. It cannot tell you where the bright pixels are. Randomly
+shuffling all pixels leaves the histogram unchanged while destroying the
+shape.</p>
+<p>A threshold classifies pixels using a rule such as intensity greater
+than or equal to 0.5. It is a simple segmentation method: it divides the
+image into foreground and background. In this project, thresholds 0.3,
+0.5, and 0.7 produce different boundaries because blurring creates
+intermediate intensities.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Threshold</th>
+<th>Largest component pixels</th>
+<th>Area in mm²</th>
+<th>IoU with known square</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.30</td>
+<td>617</td>
+<td>24.68</td>
+<td>0.930</td>
+</tr>
+<tr class="even">
+<td>0.50</td>
+<td>574</td>
+<td>22.96</td>
+<td>0.997</td>
+</tr>
+<tr class="odd">
+<td>0.70</td>
+<td>485</td>
+<td>19.40</td>
+<td>0.842</td>
+</tr>
+</tbody>
+</table>
+<p>These are measured outputs of the generated fixture. The largest
+component excludes the isolated bright speck. Threshold 0.5 is close to
+the known area in this one image, but selecting it after inspecting the
+answer is tuning. It needs validation on separate images with different
+object sizes, brightness, noise, and acquisition conditions before
+becoming an operational rule.</p>
+<p>A threshold sweep gives a sensitivity analysis, not a confidence
+interval. A confidence or coverage interpretation requires a defensible
+probability model or sampling design. The spread among three settings
+does not acquire such a meaning merely because it looks like an error
+bar.</p>
+<h2 id="convolution-makes-local-context-explicit">Convolution makes
+local context explicit</h2>
+<p>A filter combines neighboring pixel values. A three by three mean
+filter replaces a pixel with the average of its neighborhood. If the
+neighborhood contains one value of 8 and eight zeros, the result is 8/9.
+A kernel is the small array of weights used in that calculation.</p>
+<p>For two-dimensional convolution, the output at row r and column c is
+a sum of kernel values multiplied by image values at reversed
+offsets:</p>
+<pre class="text"><code>output[r, c] = sum over i,j of kernel[i,j] × image[r-i,c-j]</code></pre>
+<p>Cross-correlation uses the opposite offset convention without
+reversing the kernel. The two operations agree for a symmetric kernel,
+such as the smoothing kernel used here. They differ for asymmetric
+kernels, including some directional filters. Library names are not a
+substitute for checking the convention.</p>
+<p>Our blur kernel is the outer product of [1, 2, 1] with itself,
+divided by 16. The weights sum to one, so a constant image remains
+constant away from complications introduced by boundaries. The center
+gets the greatest weight; corners get the least. This suppresses some
+fine-scale variation while also spreading an abrupt boundary across
+nearby pixels.</p>
+<p>At the edge of the image, the neighborhood extends beyond available
+data. Zero padding, reflection, repetition of the nearest value, and
+periodic wrapping give different results. The companion's
+two-dimensional convolution uses NumPy reflect padding, which excludes
+the edge value from the reflected extension. This corresponds to SciPy's
+mirror mode; SciPy's reflect mode repeats the edge value. Its frequency
+illustration deliberately uses periodic wrapping so its sinusoidal
+calculation is exact. Boundary behavior belongs in the method
+definition. <a
+href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.convolve.html">SciPy
+convolution documentation</a></p>
+<p><img src="../assets/figures/09_image_measurement_pipeline.svg"
+alt="Synthetic image measurement pipeline" /></p>
+<p>Figure 9. The known square, simulated observed image, two thresholds,
+and two morphological transformations. Each panel uses the same pixel
+grid. Changes that make a mask appear cleaner can also change the
+measured area or topology.</p>
+<h2 id="frequency-describes-how-quickly-a-pattern-changes">Frequency
+describes how quickly a pattern changes</h2>
+<p>A spatial frequency says how often a pattern repeats per unit of
+distance. Four cycles across a 64-pixel row is 4/64 = 0.0625 cycles per
+pixel. Twenty cycles is 0.3125 cycles per pixel. The companion adds a
+sinusoid of amplitude 1 at the first frequency to a sinusoid of
+amplitude 0.3 at the second.</p>
+<p>The discrete Fourier transform expresses the sampled signal as a
+combination of frequency components. For N samples, its kth coefficient
+combines each sample with a sinusoid completing k cycles across the
+record. The FFT is an efficient algorithm for computing this transform.
+The frequency units depend on sample spacing: using millimeters rather
+than pixels changes the physical frequency labels. <a
+href="https://numpy.org/doc/stable/reference/routines.fft.html">NumPy
+Fourier transform conventions</a></p>
+<p>Now smooth with weights [1/4, 1/2, 1/4]. For a sinusoid at frequency
+f cycles per sample, the amplitude multiplier is 1/2 + 1/2 cos(2πf). At
+4/64, it is about 0.96194. At 20/64, it is about 0.30866. The output
+amplitudes are therefore about 0.96194 and 0.09260. The higher-frequency
+component is attenuated more strongly.</p>
+<p><img src="../assets/figures/10_histogram_and_frequency.svg"
+alt="Histogram and frequency response" /></p>
+<p>Figure 10. Left: the generated image histogram with three candidate
+thresholds. Right: exact-frequency sinusoids before and after periodic
+three-point smoothing. The frequency plot uses a single-sided amplitude
+convention, with special handling of the zero and Nyquist bins.</p>
+<p>This does not mean that every high frequency is noise. Fine edges,
+small defects, and text contain high-frequency information. Smoothing
+can remove the feature you intended to measure. Likewise, an abrupt crop
+can introduce frequency leakage; a window reduces some leakage while
+changing amplitude and resolution properties.</p>
+<p>Sampling imposes another limit. With one sample per pixel, 0.5 cycles
+per pixel is the Nyquist frequency. Frequencies above it can appear as
+lower frequencies after sampling. Resizing a finely striped pattern
+without appropriate filtering can produce new-looking bands. Once
+distinct physical patterns have produced the same samples, a later
+transform cannot recover which original pattern was present without
+additional assumptions.</p>
+<h2 id="morphology-acts-on-shape">Morphology acts on shape</h2>
+<p>For a binary mask, erosion keeps a foreground pixel only when the
+chosen neighborhood fits within the foreground. Dilation expands
+foreground wherever that neighborhood touches it. Their effects depend
+on the neighborhood, often called a footprint or structuring
+element.</p>
+<p>Opening applies erosion followed by dilation. It can remove small
+isolated objects or narrow protrusions. Closing applies dilation
+followed by erosion. It can fill small holes or bridge narrow gaps. A
+three by three square footprint affects diagonal and axial neighbors; a
+cross-shaped footprint has different geometry. <a
+href="https://scikit-image.org/docs/stable/api/skimage.morphology.html">scikit-image
+morphology</a></p>
+<p>In the fixture, the threshold-0.5 mask contains 575 foreground
+pixels, including the bright speck. Opening leaves 574. Closing leaves
+576. These counts are not interchangeable with the largest-component
+area in the table. Closing can retain a speck while filling a hole; a
+plausible total count can conceal two opposite errors. Look at the mask
+and its components, not just its total area.</p>
+<p>The companion uses a background of false outside the image for binary
+operations. Objects touching the border deserve special attention
+because that convention can shrink or remove boundary structures. A
+morphology recipe should specify footprint, iteration count, operation
+order, padding, and whether border-touching objects are retained.</p>
+<h2 id="from-connected-pixels-to-geometry">From connected pixels to
+geometry</h2>
+<p>Connected-component labeling assigns an identifier to each contiguous
+foreground region. Four-connectivity joins pixels through shared edges.
+Eight-connectivity also joins them through corners. Two diagonal pixels
+form two objects under the first definition and one under the second.
+Choose a definition that matches the physical measurement and keep it
+consistent.</p>
+<p>For a component with N pixels and rectangular pixel spacing s_row and
+s_col, area is N × s_row × s_col. The centroid is the mean of the
+component's pixel coordinates. If coordinates refer to pixel centers,
+state that convention before converting to physical coordinates. A
+bounding box summarizes extreme row and column positions; its area
+includes background between those extremes.</p>
+<p>For the threshold-0.5 largest component, the centroid is
+approximately row 29.521, column 31.521. The known square's pixel-center
+centroid is row 29.5, column 31.5. This small difference is an output of
+the specific simulated noise and missing pixels, not a universal
+localization accuracy.</p>
+<p>Perimeter is more delicate than area. Counting exposed pixel edges
+gives a grid-dependent estimate that changes with orientation and
+resolution. A contour-based estimate makes different interpolation
+assumptions. Circularity, often written 4π × area / perimeter², inherits
+that perimeter error. An apparently precise shape score can be dominated
+by pixel geometry at small sizes. Measurement libraries expose spacing
+and shape properties, but the estimator still needs validation against
+objects with known dimensions. <a
+href="https://scikit-image.org/docs/stable/api/skimage.measure.html">scikit-image
+region measurements</a></p>
+<h2 id="carry-calibration-uncertainty-into-the-result">Carry calibration
+uncertainty into the result</h2>
+<p>For square pixels of side s, area A = N s². If N is treated as fixed
+and the standard uncertainty of s is u_s, a first-order approximation
+gives u_A ≈ 2 N s u_s. For N = 576, s = 0.2 mm, and u_s = 0.002 mm, the
+calibration contribution is 0.4608 mm². A one-percent scale uncertainty
+becomes approximately two-percent area uncertainty.</p>
+<p>This contribution is shared across every pixel. It does not shrink by
+treating 576 pixels as 576 independent calibration observations. If
+segmentation also makes N uncertain, its contribution and any dependence
+with scale must be considered. Chapter 18 develops the covariance form
+of this calculation. The current example isolates scale uncertainty so
+the arithmetic remains inspectable.</p>
+<p>An uncertainty budget might include scale calibration, optical
+distortion, repeat imaging, threshold choice, and the discrepancy
+between a physical edge and the image-derived edge. Some terms are
+random under repeated acquisition; others represent uncertainty about a
+common correction or model. Repeating the same flawed processing on the
+same stored image does not measure acquisition variability.</p>
+<h2 id="validate-the-measurement-you-will-use">Validate the measurement
+you will use</h2>
+<p>Intersection over union, or IoU, divides the pixels present in both
+reference and predicted masks by the pixels present in either. It
+measures overlap. Two masks with the same area can have poor overlap,
+and a very small object can have a large relative error from a few
+boundary pixels. Report physical area error, localization error,
+missed-object rate, or false-object rate when those match the decision
+better.</p>
+<p>Split evaluation data by the independent acquisition unit. Patches
+from one image or repeated images of the same part can share lighting,
+texture, and defects. Putting related patches in both training and test
+sets can make a method appear more general than it is. Include
+conditions near the operational tolerance, and inspect failures by size,
+contrast, location, and camera session.</p>
+<p>Exercise: use the fixture to find a case where total foreground count
+looks close to 576 but the mask is wrong. The closing result is a useful
+starting point. Then decide whether a false speck, a small internal
+hole, or a shifted boundary is most costly for your proposed
+application. That consequence should influence the measurement and
+evaluation, not just the visual appeal of the processed image.</p>
+<section class="lab" data-lab="pixels" id="lab-pixels" aria-label="Interactive lab: A threshold becomes a measurement"><span class="eyebrow">Interactive lab · change one thing</span><h2>A threshold becomes a measurement</h2><p class="labintro">Change the segmentation threshold and pixel calibration. Inspect the largest connected object.</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><div class="controls"><label>Intensity threshold <output class="thresholdout">0.50</output><input name="threshold" aria-label="Image intensity threshold" type="range" min="0.1" max="0.9" step="0.01" value="0.5"></label><label>Pixel spacing (mm) <output class="spacingout">0.20</output><input name="spacing" aria-label="Square pixel spacing in millimeters" type="range" min="0.1" max="0.5" step="0.01" value="0.2"></label></div><div class="pixelpair"><div><canvas width="64" height="64" aria-label="Synthetic grayscale input image" role="img"></canvas><p>Observed intensity</p></div><div><canvas width="64" height="64" aria-label="Thresholded mask with largest component highlighted" role="img"></canvas><p>Green: largest component · gray: other foreground</p></div></div><div class="metrics"></div><p class="results" aria-live="polite"></p><p class="labnote">The exact synthetic 64 × 64 image from chapter 15. Foreground means intensity greater than or equal to the threshold; components use four-neighbor connectivity. Area = selected pixels × spacing². This toy object is not a medical image or a validated measuring instrument.</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="14-reason-with-vectors-and-matrices.html"><small>← Previous</small>14 Reason with vectors and matrices</a><a href="16-analyze-places-and-spatial-relationships.html"><small>Next →</small>16 Analyze places and spatial relationships</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#morphology-acts-on-shape">Morphology acts on shape</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

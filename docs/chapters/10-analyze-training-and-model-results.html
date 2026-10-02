@@ -1,0 +1,135 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>10 Analyze training data and model results · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html" aria-current="page"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html" aria-current="page"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 10</span><span>5 min read</span></div><h1 id="10-analyze-training-data-and-model-results">10 Analyze training
+data and model results</h1>
+<h2 id="start-with-the-deployment-question">Start with the deployment
+question</h2>
+<p>A model's test score is meaningful only relative to the cases it is
+supposed to handle. Is the model predicting durations for familiar task
+families on new days, recognizing new documents, evaluating new users,
+or generalizing to unseen organizations? Those are different forms of
+generalization and require different splits.</p>
+<p>Define the target, prediction time, available inputs, and loss
+associated with errors. A duration predictor for scheduling might need a
+useful upper bound as much as an accurate mean. A classifier used to
+block a dangerous action has different error costs from one used to
+suggest a low-stakes tag.</p>
+<p>Keep a simple baseline. For regression, a constant or group-average
+predictor may be informative. For classification, a majority-class or
+frequency-based predictor exposes whether a high accuracy is mostly a
+base-rate effect. A complex model should earn its complexity on the
+decision that matters.</p>
+<h2 id="split-before-learning-from-the-data">Split before learning from
+the data</h2>
+<p>Training data fits parameters. Validation data guides model or
+hyperparameter choices. A test set evaluates a frozen choice. Repeatedly
+selecting a model based on test performance converts the test set into
+another validation set.</p>
+<p>Preprocessing can leak information too. Fit normalization, feature
+selection, imputation, vocabulary construction, and other learned
+transformations using only the training portion within each evaluation
+fold. Then apply the fitted transformation to the held-out portion.
+Pipeline tools help enforce this separation. <a
+href="https://scikit-learn.org/stable/common_pitfalls.html">scikit-learn
+common pitfalls</a></p>
+<p>A random row split may be inappropriate when related rows share a
+document, person, device, source repository, or collection session. Keep
+related groups together if deployment requires generalization to new
+groups. Use time-respecting evaluation when the future is the target.
+The scikit-learn cross-validation guide distinguishes ordinary, grouped,
+stratified, and time-series split strategies for these reasons. <a
+href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn
+cross-validation</a></p>
+<h2 id="leakage-can-be-semantic">Leakage can be semantic</h2>
+<p>A dataset can have no exact duplicate rows and still leak answers. A
+paraphrase of a training example may appear in the test set. A feature
+may be recorded only after the outcome. A document's filename may encode
+its label. A research dataset may include future information unavailable
+when the prediction would be made.</p>
+<p>Audit the information path. For every feature, ask when and how it
+was created and whether the real model would know it at prediction time.
+For every split, ask which entities or source materials overlap. The
+research on leakage in machine-learning-based science shows that these
+problems can undermine apparently strong results across domains. <a
+href="https://arxiv.org/abs/2207.07048">Kapoor and Narayanan on
+leakage</a></p>
+<p>For training corpora, provenance and duplicate-family identifiers are
+useful. Store source, version, license or allowed-use information,
+collection time, transformation history, and known links between derived
+examples. Do not assume that a public URL implies unrestricted
+reuse.</p>
+<h2 id="read-learning-curves-carefully">Read learning curves
+carefully</h2>
+<p>A training-loss curve shows how an optimization process behaves on
+its training objective. It is not itself a measure of real task quality.
+A falling training loss with worsening validation loss may indicate
+overfitting under the chosen setup. A flat curve could reflect an
+optimization problem, insufficient model capacity, a difficult target,
+or an uninformative metric.</p>
+<p>Plot against examples or tokens processed and against compute or
+elapsed time when comparing efficiency. Equal numbers of steps may
+represent different amounts of data or work. Record batch size,
+learning-rate schedule, data mixture, checkpoint, and evaluation
+procedure.</p>
+<p>A data-scaling learning curve varies the amount of training data
+while holding the comparison as fair as possible. It helps ask whether
+more data appears useful. It does not guarantee that an extrapolated
+trend will continue or that more of a biased source improves the
+intended population.</p>
+<h2 id="choose-metrics-that-expose-the-error">Choose metrics that expose
+the error</h2>
+<p>For a duration predictor, mean absolute error expresses typical error
+in seconds. Squared-error metrics emphasize large misses. Relative
+errors emphasize scale but become unstable near zero. Plot observed
+against predicted values and residuals against input size, task family,
+and time. A single average can hide systematic underprediction for long
+or cold tasks.</p>
+<p>For classification, a confusion matrix exposes false positives and
+false negatives. Precision asks how many predicted positives are truly
+positive under the reference; recall asks how many reference positives
+were found. Accuracy can be uninformative when one class dominates.
+Precision-recall and ROC views answer threshold-dependent questions and
+should be read with class prevalence and deployment costs in mind. <a
+href="https://scikit-learn.org/stable/modules/model_evaluation.html">scikit-learn
+model-evaluation metrics</a></p>
+<p>Do not compare scores calculated on different test populations as if
+they were head-to-head. Preserve the per-example predictions so you can
+make paired comparisons and inspect disagreement cases.</p>
+<h2 id="check-probability-and-interval-claims">Check probability and
+interval claims</h2>
+<p>If a model emits probabilities, evaluate calibration as in the agent
+chapter. If it emits an upper duration bound intended to cover 90
+percent of outcomes, measure the fraction of observed outcomes below the
+bound. Also inspect bound width and coverage by relevant cohort. An
+extremely wide bound can have excellent coverage while being
+operationally useless.</p>
+<p>Coverage in a small sample has uncertainty. The scheduler's handful
+of predictor observations per run cannot establish a stable guarantee.
+Training and evaluating the bound on the same observations can also make
+coverage optimistic. Use time-ordered or held-out predictions
+appropriate to deployment.</p>
+<p>A confidence interval for an average is different from a prediction
+interval for a future individual outcome. Scheduling a single long task
+often requires understanding the latter. Confusing them can yield a very
+narrow but inappropriate resource or time promise.</p>
+<h2 id="use-error-analysis-to-choose-the-next-data">Use error analysis
+to choose the next data</h2>
+<p>Read a sample of failures. Categorize them by a useful mechanism
+rather than only severity: missing input evidence, label ambiguity,
+unfamiliar domain, truncation, retrieval failure, tool failure, or a
+predictable model limitation. Validate the categories on multiple cases
+before treating them as facts.</p>
+<p>Then choose an intervention tied to the mechanism. More random data
+may help a broad coverage problem. Better labels may help ambiguous
+supervision. A new feature may help an unobserved state. A product
+constraint or fallback may be more effective than another training
+run.</p>
+<p>Keep an evaluation report with intended use, test populations,
+important slices, limitations, and operational behavior. Model Cards
+provide a structured precedent for this kind of reporting; the goal is
+to make performance and scope visible to people deciding whether to use
+the model. <a href="https://arxiv.org/abs/1810.03993">Model Cards for
+Model Reporting</a></p>
+<p>Exercise: identify one feature in a current or hypothetical training
+dataset that might only be available after the outcome. Explain how it
+could improve a test score while making deployment worse. Then design a
+split and a data audit that would reveal the problem.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="09-evaluate-agents-and-judges.html"><small>← Previous</small>9 Evaluate agents and their judges</a><a href="11-collect-and-interpret-research-data.html"><small>Next →</small>11 Collect and interpret research data</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#leakage-can-be-semantic">Leakage can be semantic</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

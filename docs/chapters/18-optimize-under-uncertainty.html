@@ -1,0 +1,281 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>18 Optimize under uncertainty · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html" aria-current="page"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html" aria-current="page"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 18</span><span>11 min read</span></div><h1 id="18-optimize-under-uncertainty">18 Optimize under
+uncertainty</h1>
+<h2 id="a-better-score-is-only-useful-when-it-answers-the-decision">A
+better score is only useful when it answers the decision</h2>
+<p>Chapter 6 showed a scheduler choosing the wrong action for the
+completion-time objective even after a missing candidate was restored.
+Optimization could perfectly maximize that score and still produce the
+undesirable schedule. Before improving the optimizer, check the
+objective, the feasible actions, and the model connecting actions to
+outcomes.</p>
+<p>This chapter builds a smaller problem you can solve by hand,
+enumerate in code, and analyze under uncertainty. The project is
+choosing how many workers to run for a fixed batch. We use a
+deliberately synthetic timing model:</p>
+<pre class="text"><code>T(n) = a/n + b + c(n - 1)</code></pre>
+<p>T is duration in seconds. The worker count n is a positive integer.
+The term a/n represents perfectly divisible work, b represents fixed
+overhead, and c(n − 1) represents an increasing coordination penalty.
+For the nominal example, a = 100, b = 2, and c = 0.2. These coefficients
+were invented for instruction. They were not fitted to the scheduler, an
+agent system, or measured hardware.</p>
+<p>At one worker, T is 102 seconds. At ten, it is 13.8 seconds. Extra
+workers reduce the divisible work but increase coordination. The model
+makes that tradeoff visible. It omits memory contention, discrete tasks,
+network saturation, startup delays, and many other effects a deployed
+system might require.</p>
+<h2 id="define-the-feasible-problem">Define the feasible problem</h2>
+<p>An optimization problem contains decision variables, an objective,
+and constraints. Here the decision is n, the objective is to minimize
+T(n), and the basic constraints are integer n between 1 and 32. A memory
+budget might restrict n to at most 12. A cost budget or a failure-rate
+limit would create a different feasible set.</p>
+<p>If the goal is cost, measure cost. If the goal is a latency deadline,
+minimizing mean duration may be insufficient. A weighted sum of dollars,
+seconds, and failure probability requires conversion weights that
+express a real tradeoff. A hard permission or safety requirement
+generally belongs in a constraint or gate, not in a penalty small enough
+to be offset by speed.</p>
+<p>Write a baseline and a stopping condition before tuning. A baseline
+could be the current worker count or a simple enumeration of all
+feasible counts. A stopping condition could be finding a configuration
+that meets the deadline with a stated uncertainty margin at acceptable
+cost. “The optimizer converged” describes a numerical event, not the
+user's outcome.</p>
+<h2 id="a-derivative-tells-you-which-direction-helps-locally">A
+derivative tells you which direction helps locally</h2>
+<p>Treat n temporarily as a continuous positive number. The derivative
+of T with respect to n is −a/n² + c. It describes the local change in
+seconds for a small change in worker count. Setting this derivative to
+zero gives n = square root of (a/c).</p>
+<p>For the nominal coefficients, this is square root of 500,
+approximately 22.36068. The second derivative is 2a/n³, which is
+positive when a and n are positive. The curve bends upward everywhere in
+the positive domain, so this stationary point is the continuous global
+minimum. The fixed term b changes the height of the curve without
+changing the optimum.</p>
+<p>Workers are integers. Evaluate the neighboring feasible values rather
+than rounding without checking. T(22) = 10.7454545 seconds and T(23) =
+10.7478261 seconds. Enumeration over 1 through 32 confirms that 22 is
+best for the nominal model. The difference between 22 and 23 is only
+about 0.00237 seconds. Such a small model difference would require
+correspondingly strong evidence before it justified a real operational
+choice.</p>
+<p>With the additional constraint n at most 12, the optimum is 12 and
+the modeled duration is 12.53333 seconds. A solution that ignores the
+constraint is not a candidate you can deploy.</p>
+<pre class="python"><code>import numpy as np
+workers = np.arange(1, 33)
+seconds = 100 / workers + 2 + 0.2 * (workers - 1)
+best = workers[np.argmin(seconds)]
+feasible = workers &lt;= 12
+budget_best = workers[feasible][np.argmin(seconds[feasible])]</code></pre>
+<p>For a larger differentiable problem, the gradient contains one
+partial derivative per variable. Moving against it can reduce an
+objective locally, but the step size, constraints, scaling, and
+curvature matter. Convexity gives useful guarantees under the
+appropriate conditions; general nonlinear problems can contain several
+local minima. Solver choice follows the problem's structure. <a
+href="https://web.stanford.edu/~boyd/cvxbook/">Boyd and Vandenberghe on
+convex optimization</a>, <a
+href="https://docs.scipy.org/doc/scipy/tutorial/optimize.html">SciPy
+optimization guide</a></p>
+<h2 id="check-numerical-behavior-against-a-simple-answer">Check
+numerical behavior against a simple answer</h2>
+<p>A finite difference estimates a derivative by changing an input
+slightly. The centered estimate is [f(x+h) − f(x−h)] / (2h). A large h
+averages over curvature. A very small h can amplify floating-point
+cancellation or simulation noise. Try several scales and compare with an
+analytic derivative when one is available.</p>
+<p>An optimizer's tolerance should relate to useful precision.
+Requesting many decimal places does not make uncertain measurements more
+accurate. Check the objective value, constraint residuals, termination
+status, and sensitivity to starting points. For small discrete problems,
+exhaustive enumeration gives a transparent reference against which to
+test a more elaborate search.</p>
+<p>Poorly scaled parameters can also cause trouble. If one coordinate is
+measured in millions and another in thousandths, a common numerical step
+can be inappropriate. Scale variables deliberately and translate the
+answer back to physical units. Do not mistake a parameter rescaling for
+a new physical model.</p>
+<p>When the objective is noisy, repeated evaluations at the same
+decision may disagree. Stochastic gradient methods estimate gradients
+from samples, often using data batches. Their randomness can be useful
+computationally, but it does not eliminate the need for held-out
+evaluation or a defensible stopping rule. A noisy score that rises after
+many trials may reflect selection of favorable noise.</p>
+<h2
+id="sensitivity-is-a-question-about-what-could-change-the-answer">Sensitivity
+is a question about what could change the answer</h2>
+<p>At a fixed worker count, the duration's sensitivities to the three
+coefficients are simple: the derivative with respect to a is 1/n, with
+respect to b is 1, and with respect to c is n − 1. At n = 22, these are
+approximately 0.04545, 1, and 21.</p>
+<p>The largest derivative does not automatically identify the most
+important uncertainty source. The coefficients have different scales and
+uncertainty. Multiply each sensitivity by a plausible input standard
+uncertainty before comparing its effect on duration. A parameter with a
+large derivative but known very precisely may contribute little
+uncertainty.</p>
+<p>A local sensitivity asks about a small change near specified values.
+A global sensitivity study explores a defined input range or
+distribution and can reveal interactions, thresholds, or changing
+parameter importance. Varying one input at a time is easy to interpret
+but can miss combinations where two inputs change together. Keep the
+range and dependence assumptions visible.</p>
+<p>For this teaching problem, suppose a is uniformly distributed between
+80 and 120, b between 1 and 3, and c between 0.1 and 0.3, independently.
+These are explicit assumptions about unknown coefficients, not estimated
+real-world distributions. A uniform interval of width w has variance
+w²/12, so the three variances are 133.33333, 0.33333, and
+0.00333333.</p>
+<h2 id="propagate-uncertainty-with-the-model">Propagate uncertainty with
+the model</h2>
+<p>For a scalar output y = f(x), collect the local sensitivity
+coefficients into a vector g and the input covariance into a matrix S. A
+first-order approximation to output variance is:</p>
+<pre class="text"><code>variance(y) ≈ g^T S g</code></pre>
+<p>If inputs are independent, off-diagonal covariances are zero and this
+becomes a sum of squared sensitivities times input variances. With
+dependent inputs, the covariance terms can increase or decrease
+uncertainty. The approximation follows a local linearization; strong
+curvature, discontinuities, or wide input ranges can make it inadequate.
+<a
+href="https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty">NIST
+law of propagation of uncertainty</a></p>
+<p>In our model, duration at a fixed n is exactly linear in a, b, and c.
+Consequently its variance formula is exact under the stated
+finite-variance input assumptions:</p>
+<pre class="text"><code>Var[T(n)] = Var(a)/n² + Var(b) + (n - 1)² Var(c)</code></pre>
+<p>At 22 workers, the three contributions are approximately 0.27548,
+0.33333, and 1.47000 seconds². They sum to about 2.07882, whose square
+root is 1.44181 seconds. The coordination coefficient contributes about
+71 percent of this modeled variance. Measuring coordination more
+accurately could therefore be more useful than further refining the
+divisible-work coefficient, if these uncertainty assumptions were
+supported by real evidence.</p>
+<p>This is an uncertainty budget: a record of inputs, their
+uncertainties, their influence, and their contribution to the result. It
+gives a measurement plan rather than merely a wider error bar. <a
+href="https://www.itl.nist.gov/div898/handbook/mpc/section5/mpc56.htm">NIST
+uncertainty budgets</a></p>
+<p><img src="../assets/figures/11_optimization_and_sensitivity.svg"
+alt="Optimization and uncertainty contributions" /></p>
+<p>Figure 15. Left: the synthetic timing model with the fifth through
+ninety-fifth percentiles induced by the assumed input distributions. The
+vertical range emphasizes the useful worker-count region; the one-worker
+nominal value is 102 seconds, above the panel. Right: the analytic
+variance contributions at 22 workers. The shaded band describes input
+uncertainty under this model, not a confidence band fitted from
+scheduler data.</p>
+<h2
+id="monte-carlo-sends-uncertainty-through-the-whole-calculation">Monte
+Carlo sends uncertainty through the whole calculation</h2>
+<p>Monte Carlo propagation samples plausible inputs, evaluates the model
+for each draw, and summarizes the resulting outputs. It is especially
+useful when a nonlinear transformation makes a simple approximation
+inaccurate. Its interpretation depends on the distributions and
+dependence structure supplied to it. The method propagates assumptions;
+it does not validate them. <a
+href="https://www.bipm.org/documents/20126/2071204/JCGM_101_2008_E.pdf/325dcaad-c15a-407c-1105-8b7f322d651c">JCGM
+guidance on Monte Carlo propagation</a></p>
+<p>The companion draws 100,000 independent triples using a fixed random
+seed. It reuses each triple across all 32 worker counts. This makes each
+comparison refer to the same hypothetical workload coefficients, an
+example of common random numbers.</p>
+<pre class="python"><code>rng = np.random.default_rng(1801)
+N = 100_000
+a = rng.uniform(80, 120, N)
+b = rng.uniform(1, 3, N)
+c = rng.uniform(0.1, 0.3, N)
+t22 = a / 22 + b + 21 * c</code></pre>
+<p>The simulated mean duration is 10.74927 seconds and its sample
+standard deviation is 1.44266 seconds. The analytic mean is 10.74545 and
+the analytic standard deviation is 1.44181. Their agreement is a useful
+code and arithmetic check. It does not test whether the input
+distributions describe a real system.</p>
+<p>The simulated chance that duration exceeds 12 seconds is 0.21400.
+With independent Monte Carlo draws, its simulation standard error is
+approximately square root of [p(1−p)/N], here 0.00130. This is
+uncertainty from finite numerical sampling conditional on the chosen
+input model. It is distinct from uncertainty about the input
+distributions, model structure, or deployed workload.</p>
+<p>More draws reduce Monte Carlo noise. They do not resolve missing
+measurements, confounding, a wrong coordination model, or an omitted
+failure mode. A million draws from a poorly chosen model can produce a
+stable and misleading answer.</p>
+<p><img src="../assets/figures/12_uncertainty_and_optima.svg"
+alt="Output uncertainty and changing optima" /></p>
+<p>Figure 16. Left: modeled duration at a fixed 22 workers. Right: which
+worker count would be best if each sampled coefficient triple were known
+in advance. The right panel describes sensitivity of the optimum; it is
+not the performance of a deployable policy that can observe unknown
+coefficients for free.</p>
+<h2 id="nonlinear-transformations-change-the-answer">Nonlinear
+transformations change the answer</h2>
+<p>Suppose each batch contains 600 items. Its rate is 600/T items per
+second. The average of those per-batch rates is not the rate obtained by
+dividing all processed items by total elapsed batch time.</p>
+<p>In the simulation, the mean of 600/T at 22 workers is about 56.86854
+items per second. Dividing 600 by the mean duration gives about
+55.81774. For sequential equal-sized batches with negligible gaps, total
+items divided by total time corresponds to the second calculation. For a
+question about the distribution of individual batch rates, the first may
+be relevant. Write the denominator before naming either number
+throughput.</p>
+<p>A first-order approximation to the rate's standard deviation is [600
+/ mean(T)²] times the duration standard deviation. Using the nominal
+mean gives about 7.49220 items per second, whereas direct Monte Carlo
+gives about 7.93353. The transformation's curvature matters at this
+uncertainty scale. Inspect the full distribution when decisions depend
+on tails or thresholds.</p>
+<p>The same issue appears in finance when averaging compounded returns,
+in image measurement when squaring a scale factor, and in GIS when
+transforming coordinates before computing area. Transforming an average
+generally differs from averaging transformed observations.</p>
+<h2 id="choose-a-decision-rule-under-uncertainty">Choose a decision rule
+under uncertainty</h2>
+<p>Several legitimate objectives give different worker choices.
+Minimizing nominal duration chooses 22. In this simulation, minimizing
+the estimated ninety-fifth percentile over the 32 counts chooses 20.
+Minimizing the worst duration over the assumed coefficient intervals
+also chooses 20: the worst-case curve is 120/n + 3 + 0.3(n − 1), whose
+continuous minimum is exactly 20.</p>
+<p>These are answers to different questions. A worst-case rule protects
+against all combinations inside the specified box, including
+combinations that may be extremely unlikely or impossible if inputs are
+dependent. A percentile rule depends on the input distribution and tail
+estimation. A mean rule can tolerate rare slow outcomes. Pick the rule
+from the consequence of failure, then test it on independent
+evidence.</p>
+<p>The difference in nominal duration between 20 and 22 workers is only
+about 0.05455 seconds in this model. That may be negligible relative to
+uncertainty or cost. A broad region of acceptable choices can be more
+useful than one apparently exact optimum. Record the range of decisions
+meeting your requirements and identify which missing measurement could
+change the choice.</p>
+<p>For stochastic engineering simulations, pair candidate policies on
+the same generated workload when possible. Compare differences within
+independent replications; do not treat events within one run as
+independent runs. A fixed seed helps reproduce a calculation. It does
+not supply an uncertainty estimate by itself. If policies consume
+randomness differently, arrange random inputs by stable event or
+workload identifiers so the pairing means what you intend.</p>
+<h2 id="close-the-loop-with-observations">Close the loop with
+observations</h2>
+<p>Before applying this model to a real system, measure durations across
+several worker counts and workload families, inspect residuals, and hold
+back fresh runs. Test whether the assumed coordination term is adequate
+and whether the feasible region includes memory, reliability, and cost
+limits. Use the model to identify informative experiments, not to
+replace them.</p>
+<p>Exercise: suppose uncertainty in c is cut in half while its mean
+remains 0.2. Its variance contribution becomes one quarter as large, so
+the duration variance at 22 becomes approximately 0.97632 seconds² and
+the standard deviation about 0.98809 seconds. Explain why this improves
+knowledge of the result without changing the nominal optimum. Then
+change the mean of c and check why the optimum does move.</p>
+<p>The useful deliverable is a decision with explicit assumptions, an
+uncertainty budget, and a test that could overturn it. The mathematics
+helps you make that deliverable precise.</p>
+<section class="lab" data-lab="workers" id="lab-workers" aria-label="Interactive lab: More workers, more overhead"><span class="eyebrow">Interactive lab · change one thing</span><h2>More workers, more overhead</h2><p class="labintro">Choose a worker budget and coordination cost. Inspect the best integer choice inside that budget.</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><p class="formula">T(n) = 100/n + 2 + c(n − 1)</p><div class="controls"><label>Available worker budget <output class="budgetout">32</output><input name="budget" aria-label="Available worker budget" type="range" min="1" max="32" value="32" step="1"></label><label>Coordination c (s / additional worker) <output class="overheadout">0.20</output><input name="overhead" aria-label="Coordination seconds per additional worker" type="range" min="0.05" max="0.5" value="0.2" step="0.01"></label></div><div class="metrics"></div><svg class="chart" viewBox="0 0 590 285" role="img" aria-label="Predicted batch duration by worker count with feasible optimum highlighted"></svg><p class="results" aria-live="polite"></p><p class="labnote">Synthetic chapter 18 model: T(n) = 100/n + 2 + c(n − 1) seconds. The first term shrinks as work is split; the last grows with coordination. This deterministic sensitivity lab does not run new Monte Carlo draws. The chapter and companion separately analyze uncertain parameters.</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="17-analyze-cash-flows-returns-and-risk.html"><small>← Previous</small>17 Analyze cash flows returns and risk</a><a href="90-mathematical-reference.html"><small>Next →</small>Mathematical reference and practice</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#define-the-feasible-problem">Define the feasible problem</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

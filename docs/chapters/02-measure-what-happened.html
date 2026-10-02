@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>2 Measure what happened · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html" aria-current="page"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html" aria-current="page"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 2</span><span>6 min read</span></div><h1 id="2-measure-what-happened">2 Measure what happened</h1>
+<h2 id="build-an-account-of-work">Build an account of work</h2>
+<p>A system is easier to analyze when its records preserve the life of a
+piece of work. For a scheduler, a task may be submitted, become ready,
+wait, load a model, execute, drain output, and have its result accepted.
+It may also fail, retry, be cancelled, or produce a stale result that is
+correctly rejected. Those are different events with different
+meanings.</p>
+<p>Start with identifiers. A workflow identifier ties together dependent
+tasks. A task identifier refers to logical work. An attempt identifier
+distinguishes retries. A run identifier identifies the policy and
+environment used for an experiment. A trace identifier can connect
+events across components. Do not overload one field to mean all of
+them.</p>
+<p>An accepted result is especially important. A worker can finish
+computation after a lease expires or another attempt succeeds. Counting
+every worker completion as delivered work inflates throughput. For
+systems with retries, record both executed work and accepted useful
+output. Extra execution can increase cost without increasing the user's
+benefit.</p>
+<p>OpenTelemetry's trace model provides a useful vocabulary: a trace
+connects an operation's path, spans represent operations with start and
+end times, and attributes attach context. You do not have to adopt a
+particular telemetry stack to benefit from those distinctions. Our
+book's event schema is deliberately small and domain-specific. <a
+href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry
+traces</a></p>
+<h2 id="an-event-schema-you-can-reason-about">An event schema you can
+reason about</h2>
+<p>A practical event record contains an event identifier, schema
+version, run identifier, timestamp, event type, relevant entity
+identifiers, and a small set of event-specific fields. A phase-start
+event might include task, attempt, host, device, model, and phase. A
+policy-decision event might include the eligible candidates, their
+scores, the chosen action, and the reason other actions were
+excluded.</p>
+<p>Record the facts available at decision time. If the scheduler
+predicted an 8 second duration but observed 13 seconds later, keep both
+fields with clear names. Never overwrite the original prediction with
+the observed duration. Doing so destroys the evidence needed to evaluate
+prediction quality or detect leakage.</p>
+<p>For a policy decision, the complete candidate universe can be large.
+You may keep a compact structured record of candidate identifiers and
+score components, plus a separate artifact for full detail. What matters
+is that a future investigation can distinguish “the good action was
+unavailable,” “it was feasible but not generated,” and “it was scored
+lower.” These lead to different fixes.</p>
+<p>Keep schema changes explicit. If version 1 measures completion at
+worker finish and version 2 measures accepted delivery, a single
+continuous latency chart hides a change in meaning. Preserve the old
+definition, add the new definition, and annotate the transition. A
+versioned metric can be more trustworthy than a superficially
+uninterrupted time series.</p>
+<h2 id="time-has-more-than-one-meaning">Time has more than one
+meaning</h2>
+<p>Wall-clock time identifies when an event happened in the outside
+world. A monotonic clock measures elapsed duration without moving
+backward when the system clock changes. Simulated time is the clock
+inside a model. They are not interchangeable.</p>
+<p>Use a monotonic clock for local elapsed durations. Distributed clocks
+may disagree, so a negative duration formed by subtracting timestamps
+from different machines is a data-quality warning rather than evidence
+of time travel. Preserve clock source and synchronization assumptions
+when you need cross-host timing.</p>
+<p>The scheduler case has a particularly important distinction:
+simulated task durations and measured planner execution times. The
+simulator can advance its model clock while spending real CPU time
+computing a decision. Unless the simulator explicitly charges planner
+time to the modeled schedule, adding the planner's milliseconds to
+simulated makespan is not a valid correction. Report both and explain
+how a deployment would account for planning overhead.</p>
+<p>Choose and label units at the boundary. Store seconds or milliseconds
+consistently. Bytes, decimal gigabytes, and binary gibibytes are
+different units. A number such as 8.5 in a memory field is incomplete
+evidence until its unit and meaning are known: physical allocation,
+reservation, peak usage, or model size.</p>
+<h2 id="derive-durations-from-events">Derive durations from events</h2>
+<p>For a simple task with one accepted attempt, define submission
+latency as accepted-result time minus submission time. Define ready
+waiting time as dispatch time minus ready time. Define compute time as
+compute-end minus compute-start. Define setup time from actual load
+intervals, not from a guess based on whether a model name changed.</p>
+<p>These components may overlap. A GPU can load one model while a CPU
+computes another task. A task's output drain may overlap another task's
+computation. Summing all task durations does not give wall-clock
+makespan when work runs concurrently. A timeline makes the overlap
+visible.</p>
+<p>Similarly, waiting time is not necessarily submission-to-start. A
+task whose dependencies are unfinished is not ready to run. Keep
+dependency-blocked time separate from ready-queue time if the question
+concerns scheduler responsiveness. Otherwise you can blame a scheduling
+policy for work it was not yet allowed to schedule.</p>
+<p>For retries, decide whether the user-facing latency starts at the
+original submission and ends at the accepted result. Usually that is the
+useful quantity. Attempt-level duration is still valuable for diagnosing
+execution failures. It belongs in a separate table, with a many-to-one
+relationship to the logical task.</p>
+<h2 id="counters-gauges-and-distributions">Counters, gauges, and
+distributions</h2>
+<p>A counter accumulates events, such as accepted results or failures. A
+gauge describes a current level, such as queue length or allocated
+memory. A distribution retains variation across observations, such as
+latency. These types answer different questions.</p>
+<p>A high total completion count may simply mean that a system ran
+longer. Divide by an appropriate observation duration to obtain a rate.
+A high average resource usage can coexist with severe short bursts that
+cause failures. Preserve peaks and a time series where burst behavior
+matters. A low mean latency can coexist with a long tail. Preserve the
+distribution.</p>
+<p>Do not average percentiles from separate groups and call the result
+the combined percentile. The percentile of a union of observations
+depends on the full distributions and group sizes. Histograms can
+support aggregation when their bucket definitions align; precomputed
+quantiles generally cannot be combined that way. <a
+href="https://prometheus.io/docs/practices/histograms/">Prometheus
+histograms and summaries</a></p>
+<h2 id="measure-absence-as-carefully-as-presence">Measure absence as
+carefully as presence</h2>
+<p>An event stream naturally contains what occurred. It may omit what
+never finished. If you calculate latency only from completed tasks, a
+policy can look faster by leaving hard tasks unfinished. Always
+reconcile submitted, completed, failed, cancelled, and still-pending
+work at a stated cutoff.</p>
+<p>At cutoff time, an incomplete task has a known minimum age but an
+unknown eventual completion time. Record its state and age. Do not
+replace its latency with zero, delete it silently, or pretend the cutoff
+is its completion. Later chapters discuss censored observations and
+decision-oriented alternatives such as completion probability by a
+deadline.</p>
+<p>Logging itself can fail. Include counts that reconcile producer and
+collector views where possible. A missing phase-end event might mean the
+process crashed or the telemetry was lost. Those are different
+explanations with the same visible symptom. Keep a quality flag until
+you can distinguish them.</p>
+<h2 id="instrument-economically">Instrument economically</h2>
+<p>More telemetry is not always better. Fine-grained traces can consume
+storage, slow the system, and retain private information. Start with
+fields tied to a decision or a known debugging need. Prefer structured
+identifiers and compact result summaries to raw user content. Record
+sampling rules because a sample enriched for errors cannot estimate the
+ordinary error rate without accounting for that design.</p>
+<p>For a first implementation, add a run manifest and a small set of
+lifecycle events. Then write a validator that checks whether every
+observed accepted result can be traced back to a submission and a
+compatible attempt. A measurement system that can explain its own gaps
+is more useful than one that merely produces many records.</p>
+<p>Exercise: draw the lifecycle of one task in your system. Mark which
+transitions are observed, inferred, or missing. Circle every duration
+whose endpoints are on different clocks. Those circles identify where
+you need a measurement decision before a performance conclusion.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="01-begin-with-a-decision.html"><small>← Previous</small>1 Begin with a decision</a><a href="03-make-a-trustworthy-dataset.html"><small>Next →</small>3 Make a trustworthy dataset</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#build-an-account-of-work">Build an account of work</a><a href="#derive-durations-from-events">Derive durations from events</a><a href="#instrument-economically">Instrument economically</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

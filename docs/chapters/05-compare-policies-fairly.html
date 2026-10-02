@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>5 Compare policies fairly · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html" aria-current="page"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html" aria-current="page"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 5</span><span>6 min read</span></div><h1 id="5-compare-policies-fairly">5 Compare policies fairly</h1>
+<h2 id="preserve-the-pair">Preserve the pair</h2>
+<p>If two policies run the same workload, the natural observation is
+their difference on that workload. Define difference as new minus
+baseline, so negative values favor the new policy for a duration metric.
+Calculate the difference before averaging. This preserves the pairing
+and makes good and bad cases visible.</p>
+<p>Why does pairing help? A difficult workload may make both policies
+slow, while an easy workload makes both fast. Comparing their difference
+within the same workload removes much of that shared difficulty from the
+comparison. It does not remove a systematic bias such as always running
+one policy with a warm cache.</p>
+<p>The scheduler follow-up contains three held-out seeds for each of
+four scenarios, three policies, and two service regimes. That is 72
+report rows. It is not 72 independent pieces of evidence that the
+proposed policy is better. A comparison within one scenario and one
+regime has three matched workload pairs per baseline. The multiple
+policy rows are alternatives applied to the same workload, not extra
+workloads.</p>
+<h2
+id="absolute-and-relative-effects-answer-different-questions">Absolute
+and relative effects answer different questions</h2>
+<p>If a baseline takes 50 seconds and a proposal takes 45 seconds, the
+difference is -5 seconds, the proposal-to-baseline ratio is 0.9, and the
+reduction relative to baseline is 10 percent. The baseline is 11.1
+percent slower than the proposal because that statement uses 45 as the
+denominator. State the reference explicitly.</p>
+<p>Averaging per-workload percentage changes gives each workload equal
+weight in percentage terms. Dividing mean proposed time by mean baseline
+time is a different calculation. A tiny 1 second workload and a 100
+second workload can influence those summaries very differently. Choose
+the summary that matches the workload mix and decision; show the
+per-pair values so the reader can inspect the choice.</p>
+<p>An equal-weight mean across scenario families answers a hypothetical
+question in which those families are equally likely. It does not
+estimate production performance unless production has that mix. If you
+know the real mix, report a weighted estimate and its source. If you do
+not, report the scenarios separately.</p>
+<h2 id="variation-is-not-uncertainty">Variation is not uncertainty</h2>
+<p>Variation describes how observations differ. Uncertainty describes
+how much you do not know about a quantity you are trying to estimate.
+The spread of task latencies is variation. The uncertainty in a policy's
+mean improvement on future workloads is a different object.</p>
+<p>A confidence interval is produced by a procedure with a stated
+long-run coverage property under its assumptions. A 95 percent
+confidence procedure would cover the target in 95 percent of repetitions
+in the relevant idealized setting. It is not a promise that the
+particular interval contains the truth, and it does not include every
+source of uncertainty. A narrow interval from a biased sample can be
+precisely wrong. For paired observations, conventional mean-difference
+intervals are based on the distribution of within-pair differences. <a
+href="https://itl.nist.gov/div898/handbook/prc/section3/prc312.htm">NIST
+intervals for paired differences</a></p>
+<p>With only three held-out seeds, display all differences and be
+cautious about generalization. A numerical interval can still be
+calculated, but strong distributional assumptions or extremely limited
+resampling support may dominate its interpretation. This book does not
+use a tiny-sample interval to turn the scheduler follow-up into a
+deployment claim.</p>
+<h2 id="bootstrap-a-quantity-you-can-name">Bootstrap a quantity you can
+name</h2>
+<p>The bootstrap constructs repeated resamples from the observed data
+and recalculates a statistic. For paired runs, resample entire pairs, or
+equivalently their differences. Do not resample the new and baseline
+columns independently; that breaks the relationship you intended to
+use.</p>
+<p>The companion includes 30 independent synthetic blocks. Their
+measured mean difference is about -1.240 seconds. A seeded
+20,000-resample percentile bootstrap gives an illustrative 95 percent
+interval of approximately -2.508 to 0.059 seconds. These are generated
+teaching data. The interval crosses zero, so this particular method and
+sample do not clearly establish the sign of the population mean
+difference. The point estimate still describes the sample.</p>
+<p>Here is the core calculation, assuming differences is a
+one-dimensional array containing one value per independent paired
+block:</p>
+<pre class="python"><code>rng = np.random.default_rng(82)
+indices = rng.integers(0, len(differences),
+                       size=(20000, len(differences)))
+resampled_means = differences[indices].mean(axis=1)
+low, high = np.quantile(resampled_means, [0.025, 0.975])</code></pre>
+<p>This simple percentile example teaches the mechanics. It is not a
+universal best method. Bootstrap variants differ, and small, highly
+skewed, dependent, or degenerate data can cause difficulties. SciPy
+documents several methods and explicitly supports paired resampling.
+Check a chosen method's assumptions rather than treating its output as
+automatic validation. <a
+href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html">SciPy
+bootstrap</a></p>
+<p>If observations share a user, workflow, document, machine session, or
+collection batch, that group may be the resampling unit. Randomly
+resampling individual rows from a strongly correlated group makes the
+sample look more informative than it is. Time series may require blocks
+that preserve temporal dependence. If you cannot identify a defensible
+independent unit, pause before attaching an inferential interval.</p>
+<h2 id="a-p-value-does-not-make-the-decision">A p value does not make
+the decision</h2>
+<p>A p value describes how incompatible the observed data are with a
+specified statistical model, often a no-effect model. It does not
+measure the probability that the hypothesis is true, the size of the
+benefit, or the importance of the result. The American Statistical
+Association warns against reducing scientific conclusions to whether a
+threshold is crossed. <a
+href="https://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf">ASA
+statement on p values</a></p>
+<p>For engineering, report the effect in useful units, uncertainty,
+cost, and guardrails. A tiny effect can be statistically detectable in a
+huge dataset but not worth maintaining. A potentially large effect can
+be uncertain in a small dataset and deserve a better experiment. “Not
+statistically significant” does not establish equivalence. If your
+decision requires proving that two alternatives differ by less than a
+tolerable amount, formulate an equivalence or noninferiority question
+with a justified margin and suitable design.</p>
+<h2 id="searching-changes-what-a-result-means">Searching changes what a
+result means</h2>
+<p>Suppose you try 40 parameter settings, inspect 15 metrics, and
+publish the best improvement. Even if none is genuinely better, some may
+look good through chance or idiosyncratic fit to the test cases. The
+issue is the selection process, not just one final comparison.</p>
+<p>Separate exploration from confirmation. Use development workloads to
+find candidates. Freeze a promising choice and its primary outcome.
+Evaluate on a fresh set that was not used for tuning. Once you inspect
+that set and change the design in response, it becomes part of
+development history. You need new evidence for the next strong
+confirmation claim.</p>
+<p>For a predeclared family of tests, methods such as Bonferroni can
+bound the chance of one or more false positives by allocating the error
+budget across comparisons. They trade sensitivity for control and do not
+repair biased data or an undefined search process. <a
+href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc463.htm">NIST
+multiple comparisons</a></p>
+<h2 id="make-the-comparison-auditable">Make the comparison
+auditable</h2>
+<p>A comparison table should state the policies, workload population,
+independent unit, number of pairs, common controls, metric definition,
+and direction of improvement. Show failures and missing pairs. Do not
+quietly compare different subsets after one policy fails to finish.</p>
+<p>The scheduler's quantile convention also deserves a note. Its report
+uses nearest rank: sort values and select rank ceiling(p times n). For
+12 completed tasks, its p95 selects the maximum. Its p50 selects the
+sixth value, whereas the conventional median of an even sample averages
+the sixth and seventh. The companion reproduces the report's convention
+rather than silently changing it. That small distinction is a useful
+example of measurement precision: two libraries can disagree without
+either being broken.</p>
+<p>Exercise: choose a metric and write three different summaries you
+could report: mean difference, mean percentage change, and ratio of
+means. Explain which would be most relevant to your decision and why.
+Then identify the independent unit you would resample if you wanted an
+uncertainty interval.</p>
+<section class="lab" data-lab="paired" id="lab-paired" aria-label="Interactive lab: Keep the workload pair"><span class="eyebrow">Interactive lab · change one thing</span><h2>Keep the workload pair</h2><p class="labintro">Change the scenario and baseline. Each line follows one workload across policies.</p><noscript><p class="notice">Enable JavaScript to use this lab. The chapter and downloadable companion remain readable without it.</p></noscript><div class="controls"><label>Scenario<select name="scenario"><option value="randomized">Randomized</option><option value="contention">Contention</option><option value="lookahead">Lookahead</option><option value="priority_fairness">Priority &amp; fairness</option></select></label><label>Baseline<select name="baseline"><option value="residency">Residency</option><option value="fifo">FIFO</option></select></label></div><div class="metrics"></div><svg class="chart" viewBox="0 0 590 270" role="img" aria-label="Paired makespans for three held-out workloads"></svg><p class="results" aria-live="polite"></p><details><summary>Inspect the paired values</summary><table class="outputtable"><thead><tr><th>Seed</th><th>Baseline (s)</th><th>Proposed (s)</th><th>Difference (s)</th></tr></thead><tbody></tbody></table></details><p class="labnote">Measured simulator data, matched-service regime, three held-out seed pairs per scenario. These few pairs describe the tested workloads; they do not establish a population-level winner.</p></section><nav class="chapterpager" aria-label="Adjacent chapters"><a href="04-see-the-shape-of-behavior.html"><small>← Previous</small>4 See the shape of behavior</a><a href="06-explain-a-losing-scheduler.html"><small>Next →</small>6 Explain a losing scheduler run</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#preserve-the-pair">Preserve the pair</a><a href="#variation-is-not-uncertainty">Variation is not uncertainty</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>

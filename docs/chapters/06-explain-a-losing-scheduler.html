@@ -1,0 +1,225 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A practical interactive book for making better engineering decisions from data."><meta name="theme-color" content="#152f32"><title>6 Explain a losing scheduler run · Practical Data Analysis</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="topinner"><a class="brand" href="../index.html"><span aria-hidden="true">∑</span>Practical Data Analysis</a><nav class="topnav" aria-label="Primary"><a href="../chapters/00-start-here.html">Read</a><a href="../labs/index.html">Labs</a><a class="desktopnav" href="../downloads.html">Downloads</a><a class="desktopnav" href="https://github.com/MrScripty/practical-data-analysis">GitHub ↗</a></nav></div></header><div class="reader"><aside class="sidebar"><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html" aria-current="page"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></aside><main class="prose" id="main"><details class="mobilecontents"><summary>Browse chapters</summary><nav aria-label="Book chapters"><h2>In this book</h2><label><span class="eyebrow">Find a chapter</span><input class="tocsearch" type="search" placeholder="Filter chapters" aria-label="Filter chapters"></label><a data-chapter href="../chapters/00-start-here.html"><span class="navnum">00</span> Start here</a><a data-chapter href="../chapters/00a-expanded-reading-path.html"><span class="navnum">00</span> A route through the expanded edition</a><a data-chapter href="../chapters/01-begin-with-a-decision.html"><span class="navnum">01</span> Begin with a decision</a><a data-chapter href="../chapters/02-measure-what-happened.html"><span class="navnum">02</span> Measure what happened</a><a data-chapter href="../chapters/03-make-a-trustworthy-dataset.html"><span class="navnum">03</span> Make a trustworthy dataset</a><a data-chapter href="../chapters/04-see-the-shape-of-behavior.html"><span class="navnum">04</span> See the shape of behavior</a><a data-chapter href="../chapters/05-compare-policies-fairly.html"><span class="navnum">05</span> Compare policies fairly</a><a data-chapter href="../chapters/06-explain-a-losing-scheduler.html" aria-current="page"><span class="navnum">06</span> Explain a losing scheduler run</a><a data-chapter href="../chapters/07-find-what-a-change-causes.html"><span class="navnum">07</span> Find out what a change causes</a><a data-chapter href="../chapters/08-analyze-a-system-over-time.html"><span class="navnum">08</span> Analyze a system over time</a><a data-chapter href="../chapters/09-evaluate-agents-and-judges.html"><span class="navnum">09</span> Evaluate agents and their judges</a><a data-chapter href="../chapters/10-analyze-training-and-model-results.html"><span class="navnum">10</span> Analyze training data and model results</a><a data-chapter href="../chapters/11-collect-and-interpret-research-data.html"><span class="navnum">11</span> Collect and interpret research data</a><a data-chapter href="../chapters/12-turn-findings-into-a-decision.html"><span class="navnum">12</span> Turn findings into an engineering decision</a><a data-chapter href="../chapters/13-practice-with-the-companion.html"><span class="navnum">13</span> Practice with the companion</a><a data-chapter href="../chapters/14-reason-with-vectors-and-matrices.html"><span class="navnum">14</span> Reason with vectors and matrices</a><a data-chapter href="../chapters/15-measure-images-as-data.html"><span class="navnum">15</span> Measure images as data</a><a data-chapter href="../chapters/16-analyze-places-and-spatial-relationships.html"><span class="navnum">16</span> Analyze places and spatial relationships</a><a data-chapter href="../chapters/17-analyze-cash-flows-returns-and-risk.html"><span class="navnum">17</span> Analyze cash flows returns and risk</a><a data-chapter href="../chapters/18-optimize-under-uncertainty.html"><span class="navnum">18</span> Optimize under uncertainty</a><a data-chapter href="../chapters/90-mathematical-reference.html"><span class="navnum">90</span> Mathematical reference and practice</a><hr><a href="../labs/index.html">Interactive labs</a><a href="../sources.html">Sources &amp; evidence</a><a href="../downloads.html">Download &amp; work offline</a></nav></details><div class="chaptermeta"><span class="eyebrow">Chapter 6</span><span>7 min read</span></div><h1 id="6-explain-a-losing-scheduler-run">6 Explain a losing scheduler
+run</h1>
+<h2 id="state-the-loss-precisely">State the loss precisely</h2>
+<p>The pinned diagnostic workload is randomized seed 7 in the supplied
+simulator. FIFO finishes the complete batch at 45.694653 simulated
+seconds. The proposed policy finishes at 56.642415 seconds, both before
+and after a candidate-generation repair. The difference is 10.947762
+seconds, about 24.0 percent of FIFO's time. All 12 tasks complete in
+these diagnostic runs.</p>
+<p>These are observed simulator results. They do not establish
+real-device throughput or universal policy quality. They are strong
+enough to ask a useful local question: what happened in this run, and
+which controlled change reduces the loss?</p>
+<p>The evidence is preserved in the snapshot's loss diagnosis report and
+five corresponding traces. The companion independently reconstructs task
+durations from events, checks completion counts, and reconciles phase
+totals with the report. This is an important first step: before
+explaining a result, make sure you can reproduce its measurement.</p>
+<h2 id="start-with-the-whole-shape">Start with the whole shape</h2>
+<p>The timeline shows load, compute, and drain intervals on CPU and GPU.
+Numbers inside compute intervals identify tasks. Read each device row
+horizontally. Blank space means no displayed task phase occupies that
+device in the trace. It is not automatically proof that useful work
+could have run there.</p>
+<p><img src="../assets/figures/01_scheduler_timeline.svg"
+alt="Scheduler phase timelines" /></p>
+<p>Figure 1. Actual simulator trace intervals for FIFO and the repaired
+proposed policy on seed 7. The final proposed task runs on the CPU while
+the GPU row is empty. The chart locates a question; feasibility and
+score records are needed to explain the choice.</p>
+<p>The latency ECDF adds a second perspective. The proposed policy
+improves some earlier task latencies while making the upper tail worse.
+A lower middle latency can coexist with a later batch finish. The
+forced-final-GPU diagnostic is included as a targeted intervention, not
+as another deployable policy.</p>
+<p><img src="../assets/figures/02_scheduler_ecdf.svg"
+alt="Scheduler task latency distributions" /></p>
+<p>Figure 2. Twelve arrival-to-accepted-result task latencies per trace.
+Curves are descriptive, and these tasks share one workload. They are not
+12 independent randomized policy experiments. With this sample size, the
+report's nearest-rank p95 is its largest task latency.</p>
+<h2 id="account-for-resource-time">Account for resource time</h2>
+<p>For a device with one execution slot, total observed device time can
+be partitioned into compute time, reserved noncompute time, and
+unreserved time under this simulator's accounting. The categories sum to
+the observation duration. Reserved noncompute time includes phases such
+as loading and draining. Unreserved time is the remaining interval, not
+a direct measure of wasted opportunity.</p>
+<p><img src="../assets/figures/03_resource_accounting.svg"
+alt="Resource time accounting" /></p>
+<p>Figure 3. The companion verifies the accounting identity for CPU and
+GPU in each plotted run. The proposed GPU has substantial unreserved
+time, while the final CPU interval extends the run. Absolute time and
+the denominator matter: a longer run can have lower utilization even
+when it performs similar useful work.</p>
+<p>This chart prevents an easy mistake. Higher CPU utilization is not
+necessarily better. A policy can keep a slow CPU busy for longer instead
+of using a faster GPU and finish later. Utilization is a diagnostic
+metric. The user-facing objective is useful completion under the
+required constraints.</p>
+<h2 id="find-the-decision-that-matters">Find the decision that
+matters</h2>
+<p>Under the proposed policy, the final task, random7, becomes ready at
+simulated time 40.495955 seconds. It needs the vision model. That model
+is warm on the CPU; other models occupy the GPU. The policy starts the
+CPU and completes at 56.642415 seconds.</p>
+<p>There were two separate questions. First, did the planner even
+consider a cold GPU replacement? Second, once it considered that action,
+did its scoring rule prefer it?</p>
+<p>The original candidate helper stopped looking for replacement
+alternatives when any execution mode already fit. A feasible warm CPU
+could therefore hide a faster cold GPU option. The repair changed
+candidate coverage and added a known-cost regression fixture. That is an
+implementation defect with a concrete test.</p>
+<p>However, the complete seed-7 schedule did not improve after the
+repair. The unchanged 56.642415 second result is useful negative
+evidence. Fixing one real bug does not guarantee fixing the observed
+performance loss. Keep the before and after results instead of assuming
+the repair worked because its unit test passes.</p>
+<h2 id="inspect-the-score-in-its-own-units">Inspect the score in its own
+units</h2>
+<p>After the repair, the decision trace contains these alternatives at
+the final decision:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Candidate at time 40.495955</th>
+<th style="text-align: right;">Shaped score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Start the warm CPU</td>
+<td style="text-align: right;">0.712417</td>
+</tr>
+<tr class="even">
+<td>Wait with no immediate action</td>
+<td style="text-align: right;">0.624792</td>
+</tr>
+<tr class="odd">
+<td>Evict replicas to prepare the GPU path</td>
+<td style="text-align: right;">0.597209</td>
+</tr>
+</tbody>
+</table>
+<p>These scores are not seconds, probabilities, or measured throughput.
+They combine the planner's modeled progress and penalties. The score
+rewards partial progress inside a finite horizon and charges setup or
+eviction effects. Under the configured weights, the earlier-finishing
+GPU continuation does not receive enough advantage to overcome its
+penalties.</p>
+<p>This is objective alignment in concrete form. A surrogate is a
+quantity used in place of the true goal because it is convenient to
+compute or optimize. A good surrogate should rank important choices
+similarly to the goal. Here, a higher shaped score selects an action
+that finishes the batch later in the tested state. The ranking mismatch
+remains after the candidate coverage fix.</p>
+<p>Do not infer that every partial-progress reward is wrong. It can be
+useful when a horizon ends before any task completes. The question is
+whether its scale and interaction with setup penalties produce the
+choices you actually want across relevant states.</p>
+<h2 id="use-a-targeted-intervention">Use a targeted intervention</h2>
+<p>The diagnosis forces the final GPU path once, while otherwise keeping
+the relevant simulator state and physical ledger constraints. That run
+finishes at 47.038627 seconds, a reduction of 9.603788 seconds relative
+to the proposed default.</p>
+<p>This intervention provides stronger mechanistic evidence than a
+correlation between GPU idle time and slow completion. It shows that
+changing that particular decision, under the simulated conditions,
+improves the outcome. It is not an exact oracle and not a complete
+general scheduling policy. It still finishes 1.343974 seconds later than
+FIFO because earlier decisions and readiness times differ.</p>
+<p>That remainder matters. It prevents the story from becoming “we found
+the one cause.” The data supports a substantial local contribution from
+the final placement choice. It does not isolate all earlier differences
+or prove the best possible schedule.</p>
+<h2 id="test-the-attractive-alternative-explanation">Test the attractive
+alternative explanation</h2>
+<p>A plausible explanation was that fairness protection caused the loss.
+The diagnostic disables protection in the proposed policy. The result is
+56.665930 seconds, essentially the same slow batch finish. This does not
+support describing the seed-7 loss as the necessary cost of
+fairness.</p>
+<p>The narrow conclusion is that removing this mechanism did not remove
+this loss in this tested configuration. It does not prove fairness has
+zero effect on every task, every schedule, or every workload. Changes to
+protection can alter earlier dispatch decisions and tradeoffs. A sound
+conclusion is precise about what was varied and what outcome
+remained.</p>
+<h2 id="widen-the-comparison-without-overselling-it">Widen the
+comparison without overselling it</h2>
+<p>The follow-up uses previously unexamined seeds 59, 83, and 101, with
+the same protected-turn rule and boost inputs available across policies.
+The baseline ranking rules still differ by design. Matching service
+obligations and available information makes this a better policy
+comparison; it does not make every dispatch decision identical.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Matched service scenario</th>
+<th style="text-align: right;">FIFO mean seconds</th>
+<th style="text-align: right;">Residency mean seconds</th>
+<th style="text-align: right;">Proposed mean seconds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Randomized</td>
+<td style="text-align: right;">47.352</td>
+<td style="text-align: right;">40.343</td>
+<td style="text-align: right;">47.084</td>
+</tr>
+<tr class="even">
+<td>Priority stress</td>
+<td style="text-align: right;">54.166</td>
+<td style="text-align: right;">54.166</td>
+<td style="text-align: right;">54.166</td>
+</tr>
+<tr class="odd">
+<td>Contention</td>
+<td style="text-align: right;">40.904</td>
+<td style="text-align: right;">40.904</td>
+<td style="text-align: right;">34.755</td>
+</tr>
+<tr class="even">
+<td>Lookahead</td>
+<td style="text-align: right;">14.638</td>
+<td style="text-align: right;">14.638</td>
+<td style="text-align: right;">12.821</td>
+</tr>
+</tbody>
+</table>
+<p>The proposed policy is close to FIFO on the randomized mean and
+slower than the simple residency baseline. It improves the means in the
+contention and lookahead scenarios. There are only three seeds per
+scenario. Show every pair and keep the conclusion descriptive.</p>
+<p><img src="../assets/figures/04_holdout_pairs.svg"
+alt="Matched holdout differences" /></p>
+<p>Figure 4. Every held-out seed is shown. Negative differences favor
+the proposed policy. Different scenario families answer different
+questions, so the book does not combine them into an unsupported
+universal win rate.</p>
+<p>A single-parameter follow-up increases delay_weight from 0.25 to 1.0.
+The randomized proposed mean drops from 47.084 to 43.412 seconds but
+remains above residency's 40.343 seconds. Contention changes slightly
+from 34.755 to 34.780; the other displayed scenario means stay the same.
+This makes objective design a worthwhile next experiment. It does not
+validate a newly tuned default, especially after the same seeds have now
+informed the investigation.</p>
+<h2 id="end-with-the-next-engineering-test">End with the next
+engineering test</h2>
+<p>The evidence supports keeping the candidate-coverage regression test,
+improving instrumentation for score components, and comparing
+completion-oriented objective profiles against stronger simple
+baselines. Use fresh arrival and model-popularity seeds, fixed resource
+limits, matched service obligations, and a stated primary objective.
+Report tail behavior, unresolved work, reloads, and planner cost
+alongside completion.</p>
+<p>Only after that should a shadow evaluation on real runtime traces
+test the simulator's assumptions. The useful result of this
+investigation is not an unconditional policy recommendation. It is a
+narrowed problem: one repaired coverage defect, one demonstrated local
+score mismatch, a partly explained remaining aggregate loss, and a
+specific next experiment.</p>
+<nav class="chapterpager" aria-label="Adjacent chapters"><a href="05-compare-policies-fairly.html"><small>← Previous</small>5 Compare policies fairly</a><a href="07-find-what-a-change-causes.html"><small>Next →</small>7 Find out what a change causes</a></nav></main><aside class="sidebar onthispage"><h2>On this page</h2><a href="#state-the-loss-precisely">State the loss precisely</a><a href="#start-with-the-whole-shape">Start with the whole shape</a><a href="#account-for-resource-time">Account for resource time</a><a href="#use-a-targeted-intervention">Use a targeted intervention</a></aside></div><footer class="sitefooter"><div class="wrap"><span>Practical Data Analysis for Engineering Decisions</span><span>Measured where stated. Synthetic where labeled. <a href="../sources.html">Evidence &amp; sources</a></span></div></footer><script src="../assets/math.js"></script><script src="../assets/data.js"></script><script src="../assets/expanded-data.js"></script><script src="../assets/expanded-math.js"></script><script src="../assets/labs.js"></script><script src="../assets/expanded-labs.js"></script><script src="../assets/site.js"></script></body></html>
