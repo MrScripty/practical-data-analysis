@@ -1,27 +1,25 @@
 # Practical Data Analysis for Engineering Decisions
 
-A static, accessible reading edition with nine interactive examples embedded in the chapters. The expanded edition has 18 chapters, a mathematical reference, 16 figures, and a 100-page downloadable PDF.
+A practical book by Puma on moving from a surprising result to a better engineering decision. Learn to frame questions, measure fairly, preserve comparisons, reason about uncertainty and choose the next experiment.
 
-- **Read:** https://mrscripty.github.io/practical-data-analysis/
-- **Site:** `docs/` is the complete GitHub Pages publishing directory
-- **Manuscript:** `source/chapters/` and `source/references.md`
-- **Build:** Python 3 and Pandoc; run `python build.py`
-- **Test:** Node.js; run `node --test tests/math.test.js`, then `python tests/check_site.py`
+**[Read online](https://mrscripty.github.io/practical-data-analysis/)** · **[Download the PDF](https://mrscripty.github.io/practical-data-analysis/downloads/practical_data_analysis_for_engineering_decisions.pdf)** · [Downloads and reproducible companion](https://mrscripty.github.io/practical-data-analysis/downloads.html)
 
-The browser labs use plain JavaScript and SVG. No package install, analytics, cookies, external font service, model API, server, or login is required to read or use them. User input is neither transmitted nor persisted. Links to references and GitHub navigate to external sites in the usual way.
+The expanded edition has 18 chapters, nine interactive examples, a mathematical reference and a 100-page PDF.
 
-## Evidence
+## Start reading
 
-The scheduler examples use measured Python-simulator reports and event traces. They are not real-device or production-service benchmarks. The cohort and judge examples are explicitly synthetic. Each lab displays its data status and limitations. The downloadable companion contains the data and executable Python analysis.
+Follow the book in order for a complete scheduler investigation, or [try a browser lab](https://mrscripty.github.io/practical-data-analysis/labs/) to explore distributions, matched comparisons, vectors, images, GIS and other worked examples.
 
-## GitHub Pages
+The website needs no installation, login or backend. Browser-lab inputs stay in the page and are neither sent nor saved. For offline reading, download and extract the interactive-site ZIP, then open its index.html. The separate PDF is self-contained.
 
-Publish `main` → `/docs` under **Settings → Pages → Deploy from a branch**. The included `.nojekyll` leaves the prebuilt HTML untouched. All asset links are relative, so this works as a project site. The offline ZIP contains the reading site and browser labs. PDF/companion downloads and external references still need a connection. Open the extracted site directly with `index.html` after extraction.
+## Reproduce the analysis
 
-## Reuse and third-party material
+Download the companion and follow its included README for the Python environment, data snapshot and checks. The scheduler case uses measured Python-simulator reports and traces. Cohort and judge examples are synthetic. Each lab states its evidence and limitations; simulator measurements do not establish real-device or production-service performance.
 
-No license grant is specified for this repository. Public availability alone is not a grant of unrestricted reuse. Linked papers and documentation retain their original authors' rights. Explanatory prose, examples, visualizations, and interface code are original to this book. The companion snapshot includes selected scheduler source needed to interpret the user-authorized simulator case; see its README and provenance manifest.
+## Build or contribute
 
-## Shared-link previews
+The manuscript lives in `source/chapters/` and `source/references.md`; `docs/` is the generated GitHub Pages site.
 
-Every HTML page includes static Open Graph and Twitter card metadata using a landscape book-cover card. Page-specific canonical URLs and titles are included; the image is JPEG, 1280 × 640 (230,773 bytes). The same card is saved in the repository’s Settings → Social preview. Chat and social apps control their own cropping and cache refresh timing.
+[Contributor instructions](CONTRIBUTING.md) cover the Python/Pandoc build, Node tests, site checks and publication. Reading and using the supplied browser examples require none of those tools.
+
+No distribution license is specified. Third-party works retain their original rights; see the [sources and evidence notes](https://mrscripty.github.io/practical-data-analysis/sources.html).
