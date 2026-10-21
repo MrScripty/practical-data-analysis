@@ -23,4 +23,3 @@ The manuscript lives in `source/chapters/` and `source/references.md`; `docs/` i
 [Contributor instructions](CONTRIBUTING.md) cover the Python/Pandoc build, Node tests, site checks and publication. Reading and using the supplied browser examples require none of those tools.
 
 No distribution license is specified. Third-party works retain their original rights; see the [sources and evidence notes](https://mrscripty.github.io/practical-data-analysis/sources.html).
-
